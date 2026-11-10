@@ -7,7 +7,7 @@ description: 使用 OpenClaw Onboarding 設定模型、工作區、Gateway、聊
 
 > 完成本章後，你將了解如何設定模型、工作區、Gateway 與聊天平台，並知道如何安全地重新設定 OpenClaw。
 
-> **前置條件：** 已完成[第 2 章：手動安裝 OpenClaw](/adopt/chapter2)。
+> **前置條件：** 已完成[第 2 章：手動安裝 OpenClaw](/adopt/chapter2/)。
 
 ::: warning 版本提醒
 OpenClaw 的命令列選項與設定欄位可能隨版本變更。本文保留上游教材所依據的指令與設定方式；實際執行前，請以[官方文件](https://docs.openclaw.ai/)及你安裝的版本為準。
@@ -85,7 +85,7 @@ QuickStart 會套用以下預設值（實際內容請以安裝版本為準）：
 
 #### 步驟一：模型與驗證方式
 
-選擇模型供應商，並依其要求設定 API Key 或其他驗證方式。模型供應商的比較與本機模型設定，請參考[第 5 章：模型管理](/adopt/chapter5)。
+選擇模型供應商，並依其要求設定 API Key 或其他驗證方式。模型供應商的比較與本機模型設定，請參考[第 5 章：模型管理](/adopt/chapter5/)。
 
 <details>
 <summary>安全提醒：模型選擇與工具權限</summary>
@@ -97,7 +97,7 @@ QuickStart 會套用以下預設值（實際內容請以安裝版本為準）：
 - 對外部輸入採取不信任原則，避免讓網頁或文件中的惡意提示詞指示 Agent 執行未授權操作。
 - 只開啟完成任務所需的工具與檔案權限。
 
-延伸閱讀：[第 10 章：安全防護與威脅模型](/adopt/chapter10)。
+延伸閱讀：[第 10 章：安全防護與威脅模型](/adopt/chapter10/)。
 
 </details>
 
@@ -133,7 +133,7 @@ openclaw onboard --secret-input-mode ref --non-interactive
 
 設定 Gateway 的連接埠（上游教材列出的預設值為 18789）、綁定位址及驗證方式。
 
-初次使用建議維持本機綁定，不要為了方便直接監聽所有網路介面。若要從其他裝置連線，請先閱讀[第 9 章：遠端存取與網路](/adopt/chapter9)，並使用 VPN、Tailscale 或 SSH 隧道等受控方式。
+初次使用建議維持本機綁定，不要為了方便直接監聽所有網路介面。若要從其他裝置連線，請先閱讀[第 9 章：遠端存取與網路](/adopt/chapter9/)，並使用 VPN、Tailscale 或 SSH 隧道等受控方式。
 
 <details>
 <summary>Gateway Token 與 SecretRef</summary>
@@ -163,7 +163,7 @@ openclaw onboard --gateway-token-ref-env GATEWAY_TOKEN --non-interactive
 openclaw channels add
 ~~~
 
-新增渠道。各平台的權限、Bot Token 與配對方式不同，請參考[第 4 章：連接聊天平台](/adopt/chapter4)。
+新增渠道。各平台的權限、Bot Token 與配對方式不同，請參考[第 4 章：連接聊天平台](/adopt/chapter4/)。
 
 #### 步驟五：安裝背景服務
 
@@ -187,7 +187,7 @@ openclaw channels add
 
 啟動 Gateway，確認服務狀態，再依需求安裝技能（Skills）。不要一次安裝大量不熟悉的技能；先檢查來源、權限和程式碼，再以低權限環境測試。
 
-技能開發及發布的延伸內容，請參考[附錄 D：技能開發與發布指南](/appendix/appendix-d)。
+技能開發及發布的延伸內容，請參考[附錄 D：技能開發與發布指南](/appendix/appendix-d/)。
 
 ### 1.4 設定網路搜尋
 
@@ -276,7 +276,7 @@ macOS 應用程式可能依功能需求申請以下 TCC 權限：
 
 ### 2.5 安裝 CLI（步驟 ⑥）
 
-安裝全域 openclaw CLI 後，才能在終端機使用命令及部分排程功能。若已依[第 2 章](/adopt/chapter2)完成安裝，可略過重複步驟。
+安裝全域 openclaw CLI 後，才能在終端機使用命令及部分排程功能。若已依[第 2 章](/adopt/chapter2/)完成安裝，可略過重複步驟。
 
 ### 2.6 Onboarding 對話（步驟 ⑦）
 
@@ -337,14 +337,14 @@ OpenClaw 可在同一個 Gateway 下管理多個 Agent。每個 Agent 可以有�
 openclaw agents add <name>
 ~~~
 
-請將 <name> 換成你要建立的 Agent 名稱。
+請將 `<name>` 換成你要建立的 Agent 名稱。
 
 ### 4.2 Agent 的常見設定欄位
 
 | 設定欄位 | 說明 |
 |---|---|
 | agents.list[].name | Agent 名稱 |
-| agents.list[].workspace | 工作區路徑；上游教材示例預設為 ~/.openclaw/workspace-<agentId> |
+| agents.list[].workspace | 工作區路徑；上游教材示例預設為 `~/.openclaw/workspace-<agentId>` |
 | agents.list[].agentDir | Agent 自己的設定目錄 |
 
 <details>
@@ -435,7 +435,7 @@ openclaw onboard \
 
 **Q：設定檔放在哪裡？**
 
-上游教材列出的預設狀態目錄為 ~/.openclaw/，工作區通常位於 ~/.openclaw/workspace/。實際路徑可能因 profile 或環境變數而不同。設定檔欄位請參考[附錄 G：設定檔詳解](/appendix/appendix-g)。
+上游教材列出的預設狀態目錄為 ~/.openclaw/，工作區通常位於 ~/.openclaw/workspace/。實際路徑可能因 profile 或環境變數而不同。設定檔欄位請參考[附錄 G：設定檔詳解](/appendix/appendix-g/)。
 
 **Q：設定完成後，如何立即開始對話？**
 
@@ -450,7 +450,7 @@ Dashboard 可在未設定聊天渠道時提供本機操作入口；請依目前�
 
 **Q：模型供應商不在清單中怎麼辦？**
 
-選擇 **Custom Provider**，填入相容類型、Base URL、模型 ID 及必要的驗證資訊。詳見本章第 3 節及[第 5 章：模型管理](/adopt/chapter5)。
+選擇 **Custom Provider**，填入相容類型、Base URL、模型 ID 及必要的驗證資訊。詳見本章第 3 節及[第 5 章：模型管理](/adopt/chapter5/)。
 
 **Q：Remote 模式會修改遠端主機嗎？**
 
@@ -471,7 +471,7 @@ Dashboard 可在未設定聊天渠道時提供本機操作入口；請依目前�
 - [ ] 僅連接需要的聊天渠道。
 - [ ] 背景服務使用適當的使用者身分執行。
 - [ ] 已理解 --reset 及完整重設可能造成的資料遺失。
-- [ ] 已閱讀[安全防護與威脅模型](/adopt/chapter10)。
+- [ ] 已閱讀[安全防護與威脅模型](/adopt/chapter10/)。
 
 ## 原始來源與改作說明
 

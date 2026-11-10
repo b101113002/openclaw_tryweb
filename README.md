@@ -9,29 +9,34 @@
 - 構建 OpenClaw：Agent 架構、ReAct、工具、Gateway、沙箱與 Skill 開發。
 - 參考附錄、台灣繁中術語表、翻譯進度及更新紀錄。
 
-**目前是第一階段起始版，並非所有上游文章都已完成繁體中文翻譯。** 未完成的頁面會明確標示，不會以摘要或佔位文字冒充完整教材。
+目前已整理第一批繁中教材：第 1、3、4 章為繁中改寫完成，第 2 章為精簡安裝導讀。其他章節頁面會明確標示翻譯進度，不會以摘要或佔位文字冒充完整教材。
 
 ## 本機啟動
 
 需要 Node.js 22 或更新版本：
 
-```bash
 npm install
 npm run docs:dev
-```
 
 正式建置：
 
-```bash
 npm run docs:build
 npm run docs:preview
-```
 
 ## GitHub Pages 部署
 
-Repository 已加入 GitHub Actions 部署流程。首次部署前，請到 **Settings → Pages → Build and deployment → Source** 選擇 **GitHub Actions**。
+- 正式網站：https://b101113002.github.io/openclaw_tryweb/
+- 原始碼及教材維護分支：main。
+- 每次推送到 main，.github/workflows/deploy.yml 就會自動執行 VitePress 建置與 GitHub Pages 部署。
+- VitePress 會在建置時產生真正的 index.html 與靜態網站檔案，輸出位置為 docs/.vitepress/dist/；不需要在 Repository 根目錄手動放一份 index.html。
 
-網站網址：https://b101113002.github.io/openclaw_tryweb/
+**首次設定（只需一次）：**
+
+1. 開啟 Repository 的 Settings → Pages。
+2. 在 Build and deployment → Source 選擇 GitHub Actions。
+3. 確認 Actions 中的 Deploy OpenClaw Traditional Chinese Guide 工作流程成功完成。
+
+請不要選擇 Deploy from a branch → main / (root)。這個專案使用 VitePress，必須先將 Markdown 編譯成靜態網站；GitHub Actions 會把編譯後的 index.html 發佈至 Pages。
 
 ## 技術原則
 

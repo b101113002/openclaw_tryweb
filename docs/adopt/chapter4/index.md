@@ -44,7 +44,7 @@ OpenClaw 可以透過內建渠道或外掛（Plugin）連接多種通訊服務�
 
 請先確認：
 
-- 已完成[第 2 章：手動安裝 OpenClaw](/adopt/chapter2)及[第 3 章：初始設定精靈](/adopt/chapter3)。
+- 已完成[第 2 章：手動安裝 OpenClaw](/adopt/chapter2/)及[第 3 章：初始設定精靈](/adopt/chapter3/)。
 - 執行 `openclaw status` 時，Gateway 狀態正常。
 - 已建立欲連接平台的帳號。
 - 了解該平台的 Bot 權限、事件訂閱、資料政策及使用限制。
@@ -310,7 +310,7 @@ openclaw config set channels.feishu.groups.GROUP_ID.requireMention false
 
 **Q：設定修改後沒有生效？**
 
-先確認修改的是正確的渠道設定，再依官方文件判斷是否需要重新啟動 Gateway。可查看[附錄 G：設定檔詳解](/appendix/appendix-g)。
+先確認修改的是正確的渠道設定，再依官方文件判斷是否需要重新啟動 Gateway。可查看[附錄 G：設定檔詳解](/appendix/appendix-g/)。
 
 **Q：在群組中 @ 機器人卻沒有回覆？**
 
