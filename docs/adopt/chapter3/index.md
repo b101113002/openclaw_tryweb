@@ -337,14 +337,14 @@ OpenClaw 可在同一個 Gateway 下管理多個 Agent。每個 Agent 可以有�
 openclaw agents add <name>
 ~~~
 
-請將 <name> 換成你要建立的 Agent 名稱。
+請將 `<name>` 換成你要建立的 Agent 名稱。
 
 ### 4.2 Agent 的常見設定欄位
 
 | 設定欄位 | 說明 |
 |---|---|
 | agents.list[].name | Agent 名稱 |
-| agents.list[].workspace | 工作區路徑；上游教材示例預設為 ~/.openclaw/workspace-<agentId> |
+| agents.list[].workspace | 工作區路徑；上游教材示例預設為 `~/.openclaw/workspace-<agentId>` |
 | agents.list[].agentDir | Agent 自己的設定目錄 |
 
 <details>
