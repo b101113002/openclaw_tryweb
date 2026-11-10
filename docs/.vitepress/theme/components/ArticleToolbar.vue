@@ -7,12 +7,13 @@ const copied = ref(false)
 
 const section = computed(() => {
   const path = page.value.relativePath || ''
-  if (path.startsWith('adopt/')) return { label: '領養 OpenClaw', href: '/adopt/intro/' }
-  if (path.startsWith('university/')) return { label: '龍蝦大學', href: '/university/intro/' }
-  if (path.startsWith('build/')) return { label: '構建 OpenClaw', href: '/build/intro/' }
+  if (path.startsWith('guide/')) return { label: 'OpenClaw 入門', href: '/guide/' }
+  if (path.startsWith('adopt/')) return { label: '舊版教材整理', href: '/adopt/intro/' }
+  if (path.startsWith('university/')) return { label: '實戰專題', href: '/university/intro/' }
+  if (path.startsWith('build/')) return { label: '進階開發', href: '/build/intro/' }
   if (path.startsWith('appendix/')) return { label: '參考附錄', href: '/reference/glossary' }
-  if (path.startsWith('agent-lab/')) return { label: '本機 Agent 實驗室', href: '/agent-lab/' }
-  return { label: '參考資料', href: '/reference/glossary' }
+  if (path.startsWith('agent-lab/')) return { label: 'Agent 實作工作室', href: '/agent-lab/' }
+  return { label: '參考資源', href: '/reference/glossary' }
 })
 
 const title = computed(() => frontmatter.value.title || page.value.title || '教學文件')
@@ -38,9 +39,11 @@ function printPage() {
       <span class="crumb-brand">OPENCLAW FIELD GUIDE</span>
       <span class="crumb-separator">/</span>
       <a :href="withBase(section.href)">{{ section.label }}</a>
+      <span class="crumb-separator">/</span>
+      <span class="crumb-current">{{ title }}</span>
     </div>
     <div class="article-toolbar-actions">
-      <span class="article-kind">閱讀教材</span>
+      <span class="article-kind">教學文章</span>
       <button type="button" @click="copyLink">{{ copied ? '已複製' : '複製連結' }}</button>
       <button type="button" @click="printPage">列印</button>
     </div>
@@ -80,6 +83,7 @@ function printPage() {
   font-weight: 700;
   text-decoration: none;
 }
+.crumb-current { color: var(--vp-c-text-2); }
 .article-toolbar-actions {
   display: flex;
   flex: none;
