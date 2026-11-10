@@ -1,25 +1,23 @@
-# 領養 OpenClaw｜使用篇
+# OpenClaw 使用與設定｜舊版教材整理
 
-本篇帶你從認識 OpenClaw 開始，依序完成安裝、初始設定、聊天平台連接、模型與智能體管理，並延伸到工具、排程、遠端存取及安全防護。
+本區保留專案早期依 Datawhale China／Hello Claw 教材整理的使用篇內容，方便查閱與追溯來源。它不再是本站主要課程的章節架構；新讀者請優先從[OpenClaw 入門課程](/guide/)開始。
 
-## 建議學習順序
+## 舊版參考章節
 
-1. **先完成安裝：** 依你的作業系統與使用情境，選擇桌面安裝或終端機安裝。
-2. **完成初始設定：** 設定模型供應商、工作目錄與基本權限。
-3. **連接聊天平台：** 先以單一平台完成測試，再逐步擴充。
-4. **熟悉工具與排程：** 確認 Agent 可以安全地執行你授權的操作。
-5. **檢查安全設定：** 在開放遠端存取或群組使用前，先確認認證、權限與日誌。
+- [第三方桌面方案（選讀）](/adopt/chapter1/)
+- [手動安裝參考](/adopt/chapter2/)
+- [初始設定精靈參考](/adopt/chapter3/)
+- [聊天平台連接參考](/adopt/chapter4/)
+- [模型管理參考](/adopt/chapter5/)
+- [智能體管理參考](/adopt/chapter6/)
+- [工具與排程參考](/adopt/chapter7/)
+- [Gateway 維運參考](/adopt/chapter8/)
+- [遠端存取與網路參考](/adopt/chapter9/)
+- [安全防護參考](/adopt/chapter10/)
+- [網頁介面與用戶端參考](/adopt/chapter11/)
 
-## 章節
+## 使用提醒
 
-- [第 1 章：AutoClaw 一鍵安裝](/adopt/chapter1/)
-- [第 2 章：手動安裝 OpenClaw](/adopt/chapter2/)
-- [第 3 章：初始設定精靈](/adopt/chapter3/)
-- [第 4 章：連接聊天平台](/adopt/chapter4/)
-- [第 5 章：模型管理](/adopt/chapter5/)
-- [第 6 章：智能體管理](/adopt/chapter6/)
-- [第 7 章：工具與排程任務](/adopt/chapter7/)
-- [第 8 章：Gateway 維運](/adopt/chapter8/)
-- [第 9 章：遠端存取與網路](/adopt/chapter9/)
-- [第 10 章：安全防護與威脅模型](/adopt/chapter10/)
-- [第 11 章：網頁介面與用戶端](/adopt/chapter11/)
+早期頁面部分內容屬上游教材的翻譯或編輯改寫，可能與目前 OpenClaw 官方文件不一致。執行指令或修改設定前，請先查看頁面中的來源資訊，並以[官方文件](https://docs.openclaw.ai/)核對目前版本。
+
+本區內容的來源、授權與保留方式，請見[來源與授權](/about/source-license/)。
