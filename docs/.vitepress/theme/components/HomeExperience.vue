@@ -75,13 +75,6 @@ const searchResults = computed(() => {
   return guides.filter((guide) => (guide.title + ' ' + guide.description + ' ' + guide.status + ' ' + guide.tags).toLocaleLowerCase().includes(query))
 })
 
-const progressKey = 'openclaw-zh-tw-learning-checklist-v2'
-const tasks = ref([
-  { id: 'install', label: '完成 AnythingLLM Desktop 安裝', done: false },
-  { id: 'onboard', label: '下載並啟用非中國開發的本機模型', done: false },
-  { id: 'test', label: '完成第一次對話與文件問答', done: false },
-  { id: 'security', label: '測試網路搜尋並檢查 Agent 權限', done: false }
-])
 const completedCount = computed(() => tasks.value.filter((task) => task.done).length)
 const progress = computed(() => Math.round((completedCount.value / tasks.value.length) * 100))
 
@@ -125,11 +118,11 @@ watch(tasks, (value) => {
   <section class="home-experience">
     <div class="home-wrap">
       <section class="home-proof" aria-label="網站內容概況">
-        <div class="proof-item"><span class="proof-value">04</span><span class="proof-label">篇原創入門教學</span></div>
+        <div class="proof-item"><span class="proof-value">07</span><span class="proof-label">個本機實作單元</span></div>
         <div class="proof-divider"></div>
-        <div class="proof-item"><span class="proof-value">01</span><span class="proof-label">套 Agent 範例工作室</span></div>
+        <div class="proof-item"><span class="proof-value">02</span><span class="proof-label">個模型家族白名單</span></div>
         <div class="proof-divider"></div>
-        <div class="proof-item"><span class="proof-value">20</span><span class="proof-label">個實戰專題入口</span></div>
+        <div class="proof-item"><span class="proof-value">01</span><span class="proof-label">套主力桌面工作台</span></div>
         <div class="proof-note"><span class="status-dot"></span><span>教材持續查核與更新</span></div>
       </section>
 
