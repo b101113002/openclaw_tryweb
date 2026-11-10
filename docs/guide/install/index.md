@@ -23,8 +23,9 @@ description: 確認 Node.js、作業系統、模型來源與費用，再依官�
 
 依目前 OpenClaw 官方安裝文件：
 
-- Node.js 24 系列至少需要 24.16.0；官方另建議使用包含安全修正的 24.22.1 以上版本。
-- Node.js 26 系列至少需要 26.1.0；官方建議使用 26.12.1 以上版本，並以 Node 26 作為推薦執行環境。
+- Node.js 22.22.3 以上、24.15 以上，或 25.9 以上版本皆列於官方支援需求。
+- 官方目前以 Node.js 26 作為推薦的預設版本；安裝程式在找不到 Node.js 時可自動協助安裝。
+- 若你自行管理 Node.js，請確認所選版本仍在 OpenClaw 官方支援範圍。
 - macOS、Linux 與 Windows 均有支援的安裝路徑。Windows 可考慮原生 Hub 應用程式、PowerShell CLI 安裝或 WSL2 Gateway。
 
 先開啟終端機檢查：
@@ -57,7 +58,7 @@ OpenClaw 本身不等於某一個模型。你需要選擇一個可用的模型�
 OpenClaw 官方提供安裝腳本：
 
 ```bash
-curl -fsSL --proto '=https' --tlsv1.2 https://openclaw.ai/install.sh | bash
+curl -fsSL https://openclaw.ai/install.sh | bash
 ```
 
 這個命令會下載並執行官方網域提供的腳本。若你希望先檢查腳本內容，可先下載到檔案、閱讀後再執行；不要把來源不明的 Shell 指令貼進終端機。

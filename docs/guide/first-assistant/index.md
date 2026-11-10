@@ -15,9 +15,11 @@ description: 啟動 onboarding、檢查 Gateway、開啟控制介面，完成第
 openclaw onboard
 ```
 
-依照精靈畫面選擇設定方式。通常可以先從 Quick start 開始認識流程；需要逐項控制工作區、模型認證、Gateway、渠道與選用功能時，改選 Custom setup。若想使用傳統逐步精靈，可查看官方文件中的 `openclaw onboard --classic`。
+目前的 `openclaw onboard` 會先偵測電腦上已可使用的 AI 連線，並透過實際 completion 測試候選模型，再進入 OpenClaw 的後續設定。這個引導流程會協助建立工作區、Gateway 與選用功能。
 
-**重要：** 不要一路按 Enter 就把所有功能打開。特別留意存取模式、工具權限、模型供應商和背景服務的選項。官方 Quick start 目前會採用預設的主要 Agent 與完整存取模式；若你不希望助理一開始就具備廣泛權限，應先閱讀安全說明並選擇適合的設定方式。
+若你需要設定自訂 Provider、遠端 Gateway、聊天渠道配對、背景服務、Skills 或匯入既有設定，可明確執行傳統設定精靈：`openclaw onboard --classic`。
+
+**重要：** 設定精靈會協助建立模型連線，但不代表你已經完成安全設定。仍要檢查 Gateway 綁定位置、認證、聊天渠道的配對規則，以及 Agent 的工具權限。若不確定某個選項的影響，先保留最小可用設定，完成第一次對話後再逐項開啟功能。
 
 ## 2. 確認 Gateway 狀態
 
