@@ -22,8 +22,9 @@ export default defineConfig({
   base, cleanUrls:true,
   themeConfig:{
     logo:'/logo.svg', siteTitle:'OpenClaw 繁中指南',
-    nav:[{text:'領養 OpenClaw',link:'/adopt/intro'},{text:'龍蝦大學',link:'/university/intro'},{text:'構建 OpenClaw',link:'/build/intro'},{text:'參考資料',link:'/reference/glossary'},{text:'GitHub',link:'https://github.com/b101113002/openclaw_tryweb'}],
+    nav:[{text:'領養 OpenClaw',link:'/adopt/intro/'},{text:'龍蝦大學',link:'/university/intro/'},{text:'本機 Agent 實驗室',link:'/agent-lab/'},{text:'構建 OpenClaw',link:'/build/intro/'},{text:'參考資料',link:'/reference/glossary'},{text:'GitHub',link:'https://github.com/b101113002/openclaw_tryweb'}],
     sidebar:{
+      '/agent-lab/':[{text:'本機 AI Agent 實驗室',items:[{text:'範例總覽',link:'/agent-lab/'}]}],
       '/adopt/':[{text:'領養 OpenClaw｜使用篇',items:adoption}],
       '/build/':[{text:'構建 OpenClaw｜開發篇',items:build}],
       '/university/':[{text:'龍蝦大學｜情境實戰',items:university}],
