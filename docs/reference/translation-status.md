@@ -1,31 +1,48 @@
-# 翻譯進度
+# 教材狀態與來源追蹤
 
-本網站依原始 Repository 的實際文件路徑逐篇追蹤，不以 README 的章節總數推測文件數量。
+本站已從「逐章翻譯」轉為「原創教學＋實作範例＋官方文件查核」。為了避免讀者混淆，以下分別標示原創課程、早期上游教材整理、規劃中的專題與已提供的範例。
 
-## 領養 OpenClaw｜使用篇
+## 原創入門課程
 
-| 章節 | 狀態 | 說明 |
+| 單元 | 狀態 | 說明 |
 |---|---|---|
-| 第 1 章 AutoClaw 一鍵安裝 | <Badge type="success">繁中改寫完成</Badge> | 完整整理上游章節的安裝、助理角色、Quick Setup、介面功能及費用說明；明確標示為中國第三方服務，列為選讀。 |
-| 第 2 章 手動安裝 OpenClaw | <Badge type="warning">精簡導讀</Badge> | 提供安裝流程及安全提醒，尚非上游全文逐段翻譯。 |
-| 第 3 章 初始設定精靈 | <Badge type="success">繁中改寫完成</Badge> | 涵蓋 CLI／macOS 引導、QuickStart、SecretRef、Gateway、渠道、自訂 Provider、多 Agent、重設及 FAQ。 |
-| 第 4 章 聊天平台接入 | <Badge type="success">繁中改寫完成</Badge> | 涵蓋渠道比較、飛書／Lark 設定、權限、事件訂閱、配對、群組政策及 FAQ；將權限建議調整為最小權限。 |
-| 第 5–11 章 | <Badge type="warning">待翻譯</Badge> | 保留原始章節入口，後續逐章完成。 |
+| 課程地圖 | <Badge type="success">已完成</Badge> | 重新設計學習順序與驗收目標。 |
+| 01｜認識 OpenClaw 與整體架構 | <Badge type="success">已完成初版</Badge> | 以自己的教學架構解釋 Gateway、Agent、模型、渠道與工具。 |
+| 02｜安裝前準備與環境檢查 | <Badge type="success">已完成初版</Badge> | 依官方文件整理系統需求、模型選擇與安裝前檢查。 |
+| 03｜完成第一次對話 | <Badge type="success">已完成初版</Badge> | 說明 onboarding、Gateway、Dashboard 與驗收流程。 |
+| 04｜建立安全的使用邊界 | <Badge type="success">已完成初版</Badge> | 以信任邊界、權限、提示詞注入與稽核為主軸。 |
 
-## 龍蝦大學｜情境實戰
+「已完成初版」表示已有可閱讀的完整教學骨架與操作內容；仍需透過不同作業系統、OpenClaw 版本及實際硬體持續測試，不代表所有環境都已實測通過。
 
-所有情境頁面已建立導覽入口，教材尚待逐篇翻譯、實作內容核對及費用／權限標示。
+## 早期上游教材整理區
 
-## 構建 OpenClaw｜開發篇
+| 內容 | 狀態 | 說明 |
+|---|---|---|
+| 第 1 章 AutoClaw | <Badge type="info">保留參考</Badge> | 第三方產品整理與選讀資訊，不是本站推薦安裝方式。 |
+| 第 2 章手動安裝 | <Badge type="info">保留參考</Badge> | 早期安裝導讀；請優先使用新的入門課程。 |
+| 第 3 章初始設定 | <Badge type="info">保留參考</Badge> | 早期繁中整理，需以官方最新版核對。 |
+| 第 4 章聊天平台 | <Badge type="info">保留參考</Badge> | 早期繁中整理，平台介面與權限可能變動。 |
+| 第 5–11 章 | <Badge type="warning">待整理</Badge> | 保留舊入口，不作為新課程的完成內容。 |
 
-已建立開發篇章節導覽及 Skill 開發入口，完整教材尚待逐章翻譯與程式碼驗證。
+## 實戰專題
 
-## 附錄 A–G
+已建立 20 個專題入口；各頁會依「情境、資料流、設定、權限、測試、驗收、故障排除」標準逐一補寫。只有具備可操作步驟與驗收方式時，才會標示為完成。
 
-已建立附錄導覽入口，完整內容尚待逐篇翻譯與外部連結查核。
+## Agent 實作工作室
+
+已提供單功能 Agent、多 Agent 研究小組與個人工作台範例。設定檔已納入版本控制，但尚未在所有使用者的本機環境與硬體上逐一測試。使用前請閱讀範例 README 與權限說明。
 
 ## 完成標準
 
-「繁中改寫完成」代表已整理主要教學步驟、表格與範例，保留必要指令及設定鍵，補充安全提醒與原始來源版本；仍需隨 OpenClaw 官方文件及上游教材更新進行技術複核。頁面導覽或簡短摘要不算完成。
+- **原創教學完成**：有清楚的學習目標、前置條件、操作步驟、驗收方式、風險提醒與官方參考來源。
+- **實作範例完成**：有設定檔、用途說明、最低權限原則及可重現的測試步驟。
+- **技術查核完成**：已對照當時官方文件；仍須隨上游版本更新再確認。
+- **待整理**：只有導覽或摘要，不算完整教學。
 
-原始來源：[Datawhale China／Hello Claw](https://github.com/datawhalechina/hello-claw)
+## 主要技術來源
+
+- [OpenClaw 官方文件](https://docs.openclaw.ai/)
+- [OpenClaw GitHub Repository](https://github.com/openclaw/openclaw)
+- [Datawhale China／Hello Claw](https://github.com/datawhalechina/hello-claw)（早期參考教材）
+
+最後查核日期：2026-11-10。
