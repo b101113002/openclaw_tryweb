@@ -11,7 +11,7 @@ description: 使用免 API Key 的網路搜尋，讓本機 Agent 找資料、擷
 
 ## 1. AnythingLLM 內建 Web-Browsing
 
-AnythingLLM Agent 提供 Web-Browsing 工具，官方文件指出預設使用 DuckDuckGo，不需要額外設定或 API Key。
+AnythingLLM Agent 提供 Web-Browsing 工具，官方文件指出預設使用 DuckDuckGo，不需要額外設定或 API Key。要注意 DuckDuckGo 是外部搜尋服務，不是本站可以自行修改或保證可用性的開源搜尋程式；它適合免註冊快速起步，但若你要求搜尋層也必須由自己管理，請閱讀下方的 SearXNG 進階路線。
 
 基本操作：
 
@@ -52,7 +52,7 @@ openclaw plugins install @openclaw/searxng-plugin
 docker run -d --name searxng -p 8888:8080 searxng/searxng
 ```
 
-接著在 SearXNG 設定檔中啟用 JSON 輸出格式，再依 OpenClaw 官方文件將搜尋 Provider 指向自己的 SearXNG 位址。這個進階路徑會增加 Docker 與 OpenClaw 的安裝步驟，因此不列為新手必修。
+先在 SearXNG 的 `settings.yml` 啟用 JSON 輸出：\n\n```yaml\nsearch:\n  formats:\n    - html\n    - json\n```\n\n再設定 OpenClaw 使用自己的搜尋服務：\n\n```bash\nexport SEARXNG_BASE_URL=http://localhost:8888\nopenclaw configure --section web\n```\n\n依互動式設定選擇 `searxng` Provider，並測試查詢。這個進階路徑會增加 Docker 與 OpenClaw 的安裝步驟，因此不列為新手必修。
 
 ## 4. 建立可靠的網路研究流程
 

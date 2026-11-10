@@ -206,7 +206,7 @@ watch(tasks, (value) => {
         <div class="workspace-grid">
           <div class="checklist-panel">
             <div class="checklist-header">
-              <div><p class="panel-overline">YOUR CHECKLIST</p><h3>入門進度</h3></div>
+              <div><p class="panel-overline">YOUR CHECKLIST</p><h3>本機 AI 進度</h3></div>
               <div class="progress-ring" :style="{ '--progress': progress + '%' }"><span>{{ progress }}%</span></div>
             </div>
             <div class="checklist-items">
@@ -222,7 +222,7 @@ watch(tasks, (value) => {
           <div class="terminal-panel">
             <div class="terminal-top">
               <div class="terminal-dots"><i></i><i></i><i></i></div>
-              <span>TERMINAL / QUICK START</span>
+              <span>ONE APP / QUICK START</span>
               <span class="terminal-live"><b></b> READY</span>
             </div>
             <div class="terminal-body">
@@ -239,14 +239,14 @@ watch(tasks, (value) => {
         <div class="principle-mark" aria-hidden="true">✳</div>
         <div>
           <p class="principle-title">本機優先．權限最小化．來源透明</p>
-          <p class="principle-desc">本站以原創教學與可重現範例為主，使用 OpenClaw 官方文件查核指令與設定；舊版上游教材另列參考，避免混淆內容來源。</p>
+          <p class="principle-desc">本站以本機開源軟體、非中國開發的公開權重模型與可查核的網路研究流程為主。雲端 API、註冊額度與綁卡服務不列為入門必需。</p>
         </div>
         <a :href="withBase('/reference/translation-status')">查看教材狀態 <span>↗</span></a>
       </section>
 
       <footer class="home-footer">
         <span>LOCAL OPEN-SOURCE AI · TRADITIONAL CHINESE GUIDE</span>
-        <span>獨立社群教學與範例專案，非 OpenClaw 官方網站。</span>
+        <span>獨立社群教學專案，非任何軟體官方網站。</span>
         <a :href="withBase('/about/source-license')">來源與授權</a>
       </footer>
     </div>
