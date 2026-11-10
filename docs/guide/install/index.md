@@ -1,108 +1,84 @@
 ---
-title: 02｜安裝前準備與環境檢查
-description: 確認 Node.js、作業系統、模型來源與費用，再依官方流程安裝 OpenClaw。
+title: 02｜安裝 AnythingLLM Desktop
+description: 只用一套桌面程式建立本機 AI 對話室，不需要雲端帳號或模型 API Key。
 ---
 
-# 02｜安裝前準備與環境檢查
+# 02｜安裝 AnythingLLM Desktop
 
-安裝前先把三件事弄清楚：**你要在哪裡運行 Gateway、模型要從哪裡來、助理預計要處理什麼資料。** 這會影響你該選哪種安裝方式、模型供應商，以及後續的安全設定。
+本課先選擇最少安裝步驟的路線：使用 AnythingLLM Desktop，透過內建模型引擎在自己的電腦執行模型。完成本課不需要註冊 OpenAI、Google、Anthropic、OpenRouter 或其他雲端 AI 帳號。
 
-> 本頁依 OpenClaw 官方文件於 2026-11-10 查核。安裝腳本、系統需求與支援平台會變動，操作前請再查看官方安裝頁。
+## 1. 下載官方桌面程式
 
-## 1. 選擇部署位置
+前往 [AnythingLLM 官方下載頁](https://anythingllm.com/download)，依照作業系統選擇安裝檔：
 
-| 部署位置 | 優點 | 需要留意 |
-|---|---|---|
-| 自己的桌上型電腦／筆電 | 容易測試，資料與服務都在自己管理的環境 | 關機或休眠時，背景服務可能無法持續提供服務 |
-| 家中常駐主機 | 可長時間運作，適合個人自動化 | 需要處理系統更新、備份、網路與電力 |
-| VPS／雲端主機 | 可持續連線，適合遠端使用 | 需額外管理 SSH、Firewall、Gateway 認證及費用 |
+| 系統 | 下載選項 |
+|---|---|
+| Windows | x64 或 ARM64 |
+| macOS | Apple Silicon 或 Intel |
+| Linux | 官方提供的桌面版安裝方式 |
 
-剛開始學習，建議先在自己控制的電腦完成安裝與本機測試，不要一開始就公開 Gateway 到網際網路。
+請只從 AnythingLLM 官方下載頁或 [GitHub 官方 Repository](https://github.com/Mintplex-Labs/anything-llm)取得程式。不要從論壇、網路硬碟或不明整合包下載。
 
-## 2. 確認作業系統與 Node.js
+## 2. 第一次啟動
 
-依目前 OpenClaw 官方安裝文件：
+1. 安裝並開啟 AnythingLLM Desktop。
+2. 依畫面完成初次設定。
+3. 選擇桌面版內建模型引擎（Built-in）。
+4. 選擇一個非中國開發團隊發布、授權清楚的模型。
+5. 等待模型下載完成，再開啟新工作區。
 
-- Node.js 22.22.3 以上、24.15 以上，或 25.9 以上版本皆列於官方支援需求。
-- 官方目前以 Node.js 26 作為推薦的預設版本；安裝程式在找不到 Node.js 時可自動協助安裝。
-- 若你自行管理 Node.js，請確認所選版本仍在 OpenClaw 官方支援範圍。
-- macOS、Linux 與 Windows 均有支援的安裝路徑。Windows 可考慮原生 Hub 應用程式、PowerShell CLI 安裝或 WSL2 Gateway。
+AnythingLLM 官方表示，桌面版提供本機模型引擎，透過 Lemonade 與 llama.cpp 在 CPU／GPU 上執行；一般使用不需要先安裝 Docker 或資料庫。
 
-先開啟終端機檢查：
+## 3. 把模型下載來源固定為 Hugging Face
 
-```bash
-node --version
-npm --version
-```
+AnythingLLM 內建模型引擎的模型來源可在進階設定中選擇：
 
-若 Node.js 版本太舊，請先從 [Node.js 官方網站](https://nodejs.org/)安裝支援版本；不要使用來路不明的安裝包或第三方鏡像。
+- Automatic：使用 Hugging Face；無法連線時可能改用 ModelScope。
+- Hugging Face：只使用 Hugging Face。
+- ModelScope：使用 ModelScope。
 
-## 3. 選擇模型連線方式
+本網站的教學請選擇 **Hugging Face**，不要使用 Automatic，避免連線失敗時自動切換到中國的模型分發平台。下載模型時再確認發布者是 Google、IBM 等官方帳號或經查核的可信任轉換版本。
 
-OpenClaw 本身不等於某一個模型。你需要選擇一個可用的模型路徑：
+## 4. 先不要安裝額外的雲端 Provider
 
-| 方式 | 適合情況 | 成本與資料考量 |
-|---|---|---|
-| 雲端模型 API | 電腦硬體不足、希望快速體驗 | 通常依使用量計費；輸入內容會送到供應商 |
-| 本機模型 | 重視本機推論、想降低 API 用量 | 需要足夠 RAM／VRAM、磁碟空間與可接受的推論速度 |
-| 混合使用 | 一般任務用本機模型，較難任務才使用雲端 | 設定較複雜，必須清楚知道哪些內容會送到雲端 |
+入門階段不需要填入以下資料：
 
-選模型時不只比較參數量，也要確認工具呼叫、繁體中文品質、上下文長度、硬體需求與授權條件。本站範例以非中國開發的模型為優先候選；實際表現仍要用自己的任務測試。
+- OpenAI API Key
+- Anthropic API Key
+- Gemini API Key
+- OpenRouter API Key
+- Perplexity、Tavily、Brave 等搜尋服務 API Key
+- 任何需要信用卡或綁定付款方式的雲端服務
 
-本機模型可先參考 [OpenClaw 本機模型說明](https://docs.openclaw.ai/gateway/local-models)與 [Ollama Provider 設定](https://docs.openclaw.ai/providers/ollama/setup)。
+AnythingLLM 介面可能會顯示許多雲端 Provider，這不代表你必須使用。本站主線只教本機推論與免 API Key 搜尋。
 
-## 4. 執行官方安裝流程
+## 5. 何時需要 Ollama？
 
-### macOS、Linux 與 WSL2
+若你只想在 AnythingLLM 中聊天、整理文件與使用內建 Agent，可以先不安裝 Ollama。
 
-OpenClaw 官方提供安裝腳本：
+以下情況才建議加裝 Ollama：
 
-```bash
-curl -fsSL https://openclaw.ai/install.sh | bash
-```
+- 想用終端機管理或切換多個模型。
+- 希望其他本機程式也共用同一個模型服務。
+- 想使用 Ollama 模型庫提供的量化版本。
+- 需要更細緻地控制模型執行參數。
 
-這個命令會下載並執行官方網域提供的腳本。若你希望先檢查腳本內容，可先下載到檔案、閱讀後再執行；不要把來源不明的 Shell 指令貼進終端機。
+Ollama 本身採 MIT 授權，但它是另一個獨立程式，不是 AnythingLLM Desktop 的必要依賴。
 
-### Windows PowerShell
+## 6. 安裝完成檢查
 
-```powershell
-iwr -useb https://openclaw.ai/install.ps1 | iex
-```
+- [ ] 我從官方下載頁取得 AnythingLLM Desktop。
+- [ ] 桌面程式已成功啟動。
+- [ ] 我選擇內建本機模型引擎。
+- [ ] 模型來源設定為 Hugging Face，而非 Automatic／ModelScope。
+- [ ] 我沒有輸入雲端模型 API Key。
+- [ ] 我知道模型權重會占用磁碟空間與 RAM／VRAM。
 
-同樣地，這個命令會執行從官方網域取得的安裝腳本。若不熟悉 PowerShell，可先閱讀 [Windows 官方安裝說明](https://docs.openclaw.ai/platforms/windows)。
+## 官方來源
 
-### 其他安裝方式
+- [AnythingLLM Desktop 下載](https://anythingllm.com/download)
+- [Desktop 安裝說明](https://docs.anythingllm.com/installation-desktop/overview)
+- [內建模型引擎與模型來源設定](https://docs.anythingllm.com/setup/llm-configuration/local/built-in)
+- [AnythingLLM GitHub／MIT License](https://github.com/Mintplex-Labs/anything-llm)
 
-官方也提供 npm、Docker、Nix 與從原始碼安裝等方法。初學者先使用官方建議的安裝路徑即可；有明確的版本管理或部署需求，再選擇其他方式。
-
-## 5. 安裝完成後先驗證
-
-安裝程式可能會直接啟動初始設定精靈。完成後，重新開啟終端機並執行：
-
-```bash
-openclaw --version
-openclaw gateway status
-```
-
-第一個命令確認 CLI 可被系統找到；第二個命令查看 Gateway 服務狀態。若系統顯示找不到 `openclaw`，先檢查終端機是否重新開啟、PATH 是否包含安裝路徑，以及安裝過程是否有錯誤。
-
-## 6. 安裝前的安全檢查
-
-- 不要把 API Key、Bot Token、密碼或私密設定貼進公開聊天或提交到 Git Repository。
-- 不要在第一次測試時就開放公開私訊、群組或外部網路存取。
-- 不要一次安裝大量 Skills 或 Plugins；先檢查來源、權限與程式內容。
-- 若使用雲端模型，避免先投入病歷、身分資料、未公開研究或其他機密內容。
-- 安裝和初次設定請使用自己有管理權限的帳號，不要以不必要的系統管理員權限執行。
-
-## 下一步
-
-環境確認完成後，前往[完成第一次對話](/guide/first-assistant/)。我們會啟動 onboarding、檢查 Gateway，再透過控制介面測試模型是否真的能回覆。
-
-## 官方文件
-
-- [OpenClaw 安裝總覽](https://docs.openclaw.ai/install)
-- [Getting started](https://docs.openclaw.ai/getting-started)
-- [Windows 安裝](https://docs.openclaw.ai/platforms/windows)
-- [Node.js 官方網站](https://nodejs.org/)
-
-> 本頁為本站原創教學。系統需求與指令查核日期：2026-11-10。
+> 本頁查核日期：2026-11-10。不同桌面版版本的 UI 名稱可能改變，請依官方說明核對。
