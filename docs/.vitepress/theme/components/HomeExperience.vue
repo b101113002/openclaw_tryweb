@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted, ref, watch } from 'vue'
+import { computed, onMounted, onUnmounted, ref, watch } from 'vue'
 import { withBase } from 'vitepress'
 
 type ModeId = 'starter' | 'practice' | 'builder'
@@ -12,9 +12,9 @@ const modes = [
     title: '先讓 OpenClaw 在自己的電腦跑起來。',
     description: '從官方 CLI 開始，先完成最小可用設定，再慢慢接上聊天平台與工具。',
     cards: [
-      { number: '01', eyebrow: 'START HERE', title: '手動安裝 OpenClaw', detail: '從自己的裝置安裝 CLI。這是本站優先推薦的入門路徑。', badge: '精簡導讀', tone: 'lime', href: '/adopt/chapter2', action: '閱讀安裝導讀' },
-      { number: '02', eyebrow: 'CONFIGURE', title: '設定 Gateway 與模型', detail: '理解 QuickStart、工作區、驗證方式與初始設定精靈。', badge: '繁中改寫', tone: 'blue', href: '/adopt/chapter3', action: '開始設定' },
-      { number: '03', eyebrow: 'CONNECT', title: '接上日常聊天平台', detail: '從單一渠道開始測試，並用最小權限原則管理 Bot。', badge: '繁中改寫', tone: 'coral', href: '/adopt/chapter4', action: '查看渠道教學' }
+      { number: '01', eyebrow: 'START HERE', title: '手動安裝 OpenClaw', detail: '從自己的裝置安裝 CLI。這是本站優先推薦的入門路徑。', badge: '精簡導讀', tone: 'lime', href: '/adopt/chapter2/', action: '閱讀安裝導讀' },
+      { number: '02', eyebrow: 'CONFIGURE', title: '設定 Gateway 與模型', detail: '理解 QuickStart、工作區、驗證方式與初始設定精靈。', badge: '繁中改寫', tone: 'blue', href: '/adopt/chapter3/', action: '開始設定' },
+      { number: '03', eyebrow: 'CONNECT', title: '接上日常聊天平台', detail: '從單一渠道開始測試，並用最小權限原則管理 Bot。', badge: '繁中改寫', tone: 'coral', href: '/adopt/chapter4/', action: '查看渠道教學' }
     ]
   },
   {
@@ -24,9 +24,9 @@ const modes = [
     title: '把 AI 助理放進每天真的會做的事。',
     description: '從郵件、行事曆到知識庫與研究流程，先挑一個需求，再逐步擴充自動化。',
     cards: [
-      { number: '01', eyebrow: 'WORKFLOW', title: '郵件與日常摘要', detail: '整理收件匣、彙整重點，建立每天都能使用的工作流程。', badge: '教材整理中', tone: 'lime', href: '/university/email-assistant', action: '查看課程入口' },
-      { number: '02', eyebrow: 'PRODUCTIVITY', title: '行事曆與會議管理', detail: '整合日程、會議準備與會後紀錄，減少重複行政工作。', badge: '教材整理中', tone: 'blue', href: '/university/calendar-ops', action: '查看課程入口' },
-      { number: '03', eyebrow: 'KNOWLEDGE', title: '建立可檢索的知識庫', detail: '把文件、研究資料與團隊知識整理成可查詢的工作空間。', badge: '教材整理中', tone: 'coral', href: '/university/knowledge-base', action: '查看課程入口' }
+      { number: '01', eyebrow: 'WORKFLOW', title: '郵件與日常摘要', detail: '整理收件匣、彙整重點，建立每天都能使用的工作流程。', badge: '教材整理中', tone: 'lime', href: '/university/email-assistant/', action: '查看課程入口' },
+      { number: '02', eyebrow: 'PRODUCTIVITY', title: '行事曆與會議管理', detail: '整合日程、會議準備與會後紀錄，減少重複行政工作。', badge: '教材整理中', tone: 'blue', href: '/university/calendar-ops/', action: '查看課程入口' },
+      { number: '03', eyebrow: 'KNOWLEDGE', title: '建立可檢索的知識庫', detail: '把文件、研究資料與團隊知識整理成可查詢的工作空間。', badge: '教材整理中', tone: 'coral', href: '/university/knowledge-base/', action: '查看課程入口' }
     ]
   },
   {
@@ -36,22 +36,22 @@ const modes = [
     title: '從使用者，走進 Agent 系統內部。',
     description: '理解 Agent、工具與 Gateway 的分工，再動手擴充自己的 Skill。',
     cards: [
-      { number: '01', eyebrow: 'ARCHITECTURE', title: '理解 OpenClaw 架構', detail: '由開發篇導覽開始，建立 Agent 系統的整體心智模型。', badge: '開發篇導覽', tone: 'lime', href: '/build/intro', action: '進入開發篇' },
-      { number: '02', eyebrow: 'CORE CONCEPTS', title: '拆解 Agent 核心機制', detail: '循序閱讀架構章節，理解提示詞、工具與訊息處理。', badge: '教材整理中', tone: 'blue', href: '/build/chapter1', action: '查看章節入口' },
-      { number: '03', eyebrow: 'MAKE A SKILL', title: '親手開發 Skill', detail: '從需求、工具介面到測試，練習把能力封裝成可重用模組。', badge: '實作入口', tone: 'coral', href: '/build/skill-practice', action: '開始實作' }
+      { number: '01', eyebrow: 'ARCHITECTURE', title: '理解 OpenClaw 架構', detail: '由開發篇導覽開始，建立 Agent 系統的整體心智模型。', badge: '開發篇導覽', tone: 'lime', href: '/build/intro/', action: '進入開發篇' },
+      { number: '02', eyebrow: 'CORE CONCEPTS', title: '拆解 Agent 核心機制', detail: '循序閱讀架構章節，理解提示詞、工具與訊息處理。', badge: '教材整理中', tone: 'blue', href: '/build/chapter1/', action: '查看章節入口' },
+      { number: '03', eyebrow: 'MAKE A SKILL', title: '親手開發 Skill', detail: '從需求、工具介面到測試，練習把能力封裝成可重用模組。', badge: '實作入口', tone: 'coral', href: '/build/skill-practice/', action: '開始實作' }
     ]
   }
 ]
 
 const guides = [
-  { title: 'AutoClaw 一鍵安裝', description: '第三方桌面方案，作為上游教材參考與選讀。', status: '第三方／選讀', href: '/adopt/chapter1', tags: 'autoclaw 安裝 桌面 第三方' },
-  { title: '手動安裝 OpenClaw', description: '在自己的電腦安裝 CLI，開始本機部署。', status: '精簡導讀', href: '/adopt/chapter2', tags: '安裝 cli 手動 mac windows linux' },
-  { title: '初始設定精靈', description: '設定模型、工作區、Gateway 與背景服務。', status: '繁中改寫', href: '/adopt/chapter3', tags: '設定 onboarding gateway model workspace' },
-  { title: '連接聊天平台', description: '理解渠道、Bot 權限、事件訂閱與配對。', status: '繁中改寫', href: '/adopt/chapter4', tags: 'telegram discord slack line feishu lark channel' },
-  { title: '領養 OpenClaw 使用篇', description: '從安裝、設定到日常使用的完整學習順序。', status: '學習導覽', href: '/adopt/intro', tags: '新手 入門 使用篇' },
-  { title: '龍蝦大學情境實戰', description: '探索郵件、行事曆、知識庫與多智能體案例。', status: '20 個情境入口', href: '/university/intro', tags: '情境 實戰 自動化 工作流' },
-  { title: '構建 OpenClaw 開發篇', description: '從 Agent 架構、ReAct 到工具與 Gateway。', status: '開發篇導覽', href: '/build/intro', tags: '開發 架構 react agent gateway' },
-  { title: 'Skill 開發實作', description: '將重複任務封裝成可重用的技能。', status: '實作入口', href: '/build/skill-practice', tags: 'skill 技能 開發' },
+  { title: 'AutoClaw 一鍵安裝', description: '第三方桌面方案，作為上游教材參考與選讀。', status: '第三方／選讀', href: '/adopt/chapter1/', tags: 'autoclaw 安裝 桌面 第三方' },
+  { title: '手動安裝 OpenClaw', description: '在自己的電腦安裝 CLI，開始本機部署。', status: '精簡導讀', href: '/adopt/chapter2/', tags: '安裝 cli 手動 mac windows linux' },
+  { title: '初始設定精靈', description: '設定模型、工作區、Gateway 與背景服務。', status: '繁中改寫', href: '/adopt/chapter3/', tags: '設定 onboarding gateway model workspace' },
+  { title: '連接聊天平台', description: '理解渠道、Bot 權限、事件訂閱與配對。', status: '繁中改寫', href: '/adopt/chapter4/', tags: 'telegram discord slack line feishu lark channel' },
+  { title: '領養 OpenClaw 使用篇', description: '從安裝、設定到日常使用的完整學習順序。', status: '學習導覽', href: '/adopt/intro/', tags: '新手 入門 使用篇' },
+  { title: '龍蝦大學情境實戰', description: '探索郵件、行事曆、知識庫與多智能體案例。', status: '20 個情境入口', href: '/university/intro/', tags: '情境 實戰 自動化 工作流' },
+  { title: '構建 OpenClaw 開發篇', description: '從 Agent 架構、ReAct 到工具與 Gateway。', status: '開發篇導覽', href: '/build/intro/', tags: '開發 架構 react agent gateway' },
+  { title: 'Skill 開發實作', description: '將重複任務封裝成可重用的技能。', status: '實作入口', href: '/build/skill-practice/', tags: 'skill 技能 開發' },
   { title: '繁體中文術語表', description: '查詢本站採用的台灣繁體中文譯詞。', status: '參考資料', href: '/reference/glossary', tags: '名詞 翻譯 術語' },
   { title: '翻譯進度與更新紀錄', description: '查看哪些章節已完成、哪些仍在整理。', status: '透明追蹤', href: '/reference/translation-status', tags: '進度 更新 changelog' }
 ]
@@ -59,6 +59,7 @@ const guides = [
 const activeMode = ref<ModeId>('starter')
 const activePath = computed(() => modes.find((mode) => mode.id === activeMode.value) || modes[0])
 const searchQuery = ref('')
+const searchInput = ref<HTMLInputElement | null>(null)
 const searchResults = computed(() => {
   const query = searchQuery.value.trim().toLocaleLowerCase()
   if (!query) return guides
@@ -75,7 +76,15 @@ const tasks = ref([
 const completedCount = computed(() => tasks.value.filter((task) => task.done).length)
 const progress = computed(() => Math.round((completedCount.value / tasks.value.length) * 100))
 
+function handleSearchShortcut(event: KeyboardEvent) {
+  if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k') {
+    event.preventDefault()
+    searchInput.value?.focus()
+  }
+}
+
 onMounted(() => {
+  window.addEventListener('keydown', handleSearchShortcut)
   try {
     const saved = JSON.parse(window.localStorage.getItem(progressKey) || '[]')
     if (Array.isArray(saved)) {
@@ -85,6 +94,12 @@ onMounted(() => {
     // Ignore unavailable or malformed local progress data.
   }
 })
+
+onUnmounted(() => window.removeEventListener('keydown', handleSearchShortcut))
+
+function resetProgress() {
+  tasks.value = tasks.value.map((task) => ({ ...task, done: false }))
+}
 
 watch(tasks, (value) => {
   if (typeof window !== 'undefined') {
@@ -108,7 +123,7 @@ async function copyCommand() {
 </script>
 
 <template>
-  <main class="home-experience">
+  <section class="home-experience">
     <div class="home-wrap">
       <section class="home-proof" aria-label="網站內容概況">
         <div class="proof-item"><span class="proof-value">03</span><span class="proof-label">章繁中改寫完成</span></div>
@@ -170,7 +185,7 @@ async function copyCommand() {
         <div class="search-panel">
           <label class="search-box">
             <span class="search-icon" aria-hidden="true">⌕</span>
-            <input v-model="searchQuery" type="search" placeholder="試試搜尋：安裝、Gateway、Telegram、Skill…" aria-label="搜尋教學內容" />
+            <input ref="searchInput" v-model="searchQuery" type="search" placeholder="試試搜尋：安裝、Gateway、Telegram、Skill…" aria-label="搜尋教學內容" />
             <button v-if="searchQuery" type="button" class="clear-search" @click="searchQuery = ''">清除</button>
             <kbd>⌘ K</kbd>
           </label>
@@ -209,7 +224,7 @@ async function copyCommand() {
                 <span>{{ task.label }}</span>
               </label>
             </div>
-            <div class="checklist-footer"><span>{{ completedCount }} / {{ tasks.length }} 項已完成</span><button type="button" class="reset-progress" @click="tasks = tasks.map((task) => ({ ...task, done: false }))">重設進度</button></div>
+            <div class="checklist-footer"><span>{{ completedCount }} / {{ tasks.length }} 項已完成</span><button type="button" class="reset-progress" @click="resetProgress">重設進度</button></div>
           </div>
 
           <div class="terminal-panel">
@@ -222,7 +237,7 @@ async function copyCommand() {
               <p class="terminal-comment"># 已安裝 OpenClaw CLI？啟動初始設定精靈：</p>
               <div class="terminal-command"><span><em>$</em> openclaw onboard</span><button type="button" @click="copyCommand" aria-label="複製 openclaw onboard 指令">複製</button></div>
               <p class="terminal-hint">{{ copyMessage || '依照終端機提示完成模型、工作區與 Gateway 設定。' }}</p>
-              <a :href="withBase('/adopt/chapter3')" class="terminal-doc-link">先看初始設定說明 <span>↗</span></a>
+              <a :href="withBase('/adopt/chapter3/')" class="terminal-doc-link">先看初始設定說明 <span>↗</span></a>
             </div>
           </div>
         </div>
@@ -243,7 +258,7 @@ async function copyCommand() {
         <a :href="withBase('/about/source-license')">來源與授權</a>
       </footer>
     </div>
-  </main>
+  </section>
 </template>
 
 <style scoped>
@@ -311,7 +326,7 @@ async function copyCommand() {
 .checklist-header { display: flex; align-items: center; justify-content: space-between; padding-bottom: 14px; border-bottom: 1px solid var(--vp-c-divider); }
 .panel-overline { margin-bottom: 5px; color: #789b61; }
 .checklist-header h3 { margin: 0; font-size: 20px; letter-spacing: -.04em; }
-.progress-ring { display: grid; width: 58px; height: 58px; place-items: center; border-radius: 50%; background: conic-gradient(#8eaf6d var(--progress), var(--vp-c-bg-alt) 0); }
+.progress-ring { position: relative; display: grid; width: 58px; height: 58px; place-items: center; border-radius: 50%; background: conic-gradient(#8eaf6d var(--progress), var(--vp-c-bg-alt) 0); }
 .progress-ring::before { position: absolute; width: 46px; height: 46px; border-radius: 50%; background: var(--vp-c-bg); content: ''; }
 .progress-ring span { z-index: 1; font-size: 11px; font-weight: 800; font-variant-numeric: tabular-nums; }
 .checklist-items { display: grid; gap: 0; padding-top: 8px; }

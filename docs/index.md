@@ -12,11 +12,11 @@ hero:
   actions:
     - theme: brand
       text: 從手動安裝開始
-      link: /adopt/chapter2
+      link: /adopt/chapter2/
     - theme: alt
       text: 探索情境實戰
-      link: /university/intro
+      link: /university/intro/
     - theme: alt
       text: 深入 Agent 架構
-      link: /build/intro
+      link: /build/intro/
 ---
