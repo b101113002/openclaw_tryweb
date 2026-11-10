@@ -1,0 +1,50 @@
+// 參考設定：合併前請先備份目前 openclaw.json，並核對 OpenClaw 版本。
+{
+  tools: {
+    agentToAgent: {
+      enabled: true,
+      allow: ["research-coordinator", "source-reader", "fact-checker", "report-editor"]
+    }
+  },
+  agents: {
+    entries: {
+      "research-coordinator": {
+        name: "研究統籌",
+        workspace: "~/.openclaw/workspace-research-coordinator",
+        agentDir: "~/.openclaw/agents/research-coordinator/agent",
+        tools: {
+          profile: "messaging",
+          allow: ["sessions_spawn", "sessions_yield", "subagents", "sessions_list", "sessions_send", "sessions_history", "session_status", "read"],
+          deny: ["exec", "process", "write", "edit", "apply_patch", "browser", "gateway"]
+        }
+      },
+      "source-reader": {
+        name: "資料閱讀員",
+        workspace: "~/.openclaw/workspace-source-reader",
+        agentDir: "~/.openclaw/agents/source-reader/agent",
+        tools: {
+          allow: ["read"],
+          deny: ["exec", "process", "write", "edit", "apply_patch", "browser", "gateway"]
+        }
+      },
+      "fact-checker": {
+        name: "事實查核員",
+        workspace: "~/.openclaw/workspace-fact-checker",
+        agentDir: "~/.openclaw/agents/fact-checker/agent",
+        tools: {
+          allow: ["read"],
+          deny: ["exec", "process", "write", "edit", "apply_patch", "browser", "gateway"]
+        }
+      },
+      "report-editor": {
+        name: "報告編輯",
+        workspace: "~/.openclaw/workspace-report-editor",
+        agentDir: "~/.openclaw/agents/report-editor/agent",
+        tools: {
+          allow: ["read"],
+          deny: ["exec", "process", "write", "edit", "apply_patch", "browser", "gateway"]
+        }
+      }
+    }
+  }
+}
