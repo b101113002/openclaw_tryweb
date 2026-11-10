@@ -5,6 +5,10 @@ description: 在自己的電腦安裝 OpenClaw CLI，並啟動初始設定精靈
 
 # 第 2 章｜手動安裝 OpenClaw
 
+<Badge type="warning">精簡版安裝導讀，非上游全文逐段翻譯</Badge>
+
+> 本頁是為了讓繁中網站先具備可用的入門說明而整理的精簡導讀；完整章節翻譯仍待補齊。安裝指令會變動，請以官方文件為準。
+
 > 本章帶你在自己的電腦安裝 OpenClaw CLI，並啟動初始設定精靈。實際安裝步驟可能隨 OpenClaw 版本調整；執行前請核對[官方安裝文件](https://docs.openclaw.ai/install)及安裝程式來源。
 
 ## 1. 選擇執行環境
@@ -77,4 +81,4 @@ OpenClaw 的安裝與模型推論是兩件事：安裝 CLI 本身不代表已經
 
 本章以 Datawhale China／Hello Claw 上游教材第二章為基礎，調整為台灣繁體中文並補充安全提醒。上游基準提交：[`724fc3e`](https://github.com/datawhalechina/hello-claw/commit/724fc3e251c58a16f92fb961c33bc207fa54ecb8)（2026-11-05）。本頁指令可能隨官方安裝流程變動，正式執行前請以[OpenClaw 官方文件](https://docs.openclaw.ai/)為準。
 
-原始教材授權及改作說明請見[來源與授權](/about/source-license)。
+原始教材：[Datawhale China／Hello Claw 第二章](https://github.com/datawhalechina/hello-claw/blob/main/docs/cn/adopt/chapter2/index.md)。本頁先以精簡導讀方式整理，尚非完整翻譯。上游教材授權及改作說明請見[來源與授權](/about/source-license)。

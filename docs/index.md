@@ -52,3 +52,13 @@ features:
 ## 來源專案
 
 本指南改作自 [Datawhale China／Hello Claw](https://github.com/datawhalechina/hello-claw)。我們會保留原作者、原始連結與授權聲明，並清楚標記繁體中文翻譯及編輯調整。詳見[來源與授權](/about/source-license)。
+
+
+## 第一批已完成的繁中章節
+
+- [第 1 章：AutoClaw 一鍵安裝（第三方服務／選讀）](/adopt/chapter1)
+- [第 2 章：手動安裝 OpenClaw（精簡導讀）](/adopt/chapter2)
+- [第 3 章：初始設定精靈](/adopt/chapter3)
+- [第 4 章：連接聊天平台](/adopt/chapter4)
+
+完整翻譯進度請見[翻譯進度](/reference/translation-status)，更新內容請見[更新紀錄](/reference/changelog)。
