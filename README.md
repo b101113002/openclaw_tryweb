@@ -2,46 +2,46 @@
 
 這個 Repository 用來維護 OpenClaw 的繁體中文學習指南。
 
-## 專案現況
+## 網站內容
 
-目前先放入可部署的網站起始專案，包含 VitePress 網站骨架、三大課程區導覽、繁中術語與翻譯進度頁、本機翻譯腳本、上游 Markdown 差異同步腳本，以及 GitHub Pages 部署設定。
+- 領養 OpenClaw：安裝、設定、聊天平台、模型、智能體、維運與安全。
+- 龍蝦大學：Skills 與真實情境實作。
+- 構建 OpenClaw：Agent 架構、ReAct、工具、Gateway、沙箱與 Skill 開發。
+- 參考附錄、台灣繁中術語表、翻譯進度及更新紀錄。
 
-**注意：這是第一階段起始版，並非所有上游文章都已完成繁體中文翻譯。** 各頁會明確標示待翻譯；不會把摘要或佔位文字冒充完整教材。
-
-## 專案檔案
-
-完整網站原始碼收納在 `.site/hello-claw-zh-tw-starter.zip`。GitHub Actions 會在建置時解壓縮並部署其中的 VitePress 網站。
-
-下載原始碼：開啟 `.site/hello-claw-zh-tw-starter.zip`，按 Download raw 後解壓縮即可。
+**目前是第一階段起始版，並非所有上游文章都已完成繁體中文翻譯。** 未完成的頁面會明確標示，不會以摘要或佔位文字冒充完整教材。
 
 ## 本機啟動
 
-解壓縮網站起始專案後，在專案資料夾執行：
+需要 Node.js 22 或更新版本：
 
 ```bash
 npm install
 npm run docs:dev
 ```
 
-## 部署
+正式建置：
 
-此 Repository 已加入 GitHub Actions Pages 工作流程。每次推送到 `main` 時，會自動安裝相依套件、建置 VitePress，並部署到 GitHub Pages。
+```bash
+npm run docs:build
+npm run docs:preview
+```
 
-預定網站網址：
+## GitHub Pages 部署
 
-https://b101113002.github.io/openclaw_tryweb/
+Repository 已加入 GitHub Actions 部署流程。首次部署前，請到 **Settings → Pages → Build and deployment → Source** 選擇 **GitHub Actions**。
 
-首次部署前，請到 **Settings → Pages → Build and deployment → Source** 選擇 **GitHub Actions**。
+網站網址：https://b101113002.github.io/openclaw_tryweb/
 
 ## 技術原則
 
 - 靜態網站：VitePress；不需要資料庫、常駐後端或付費搜尋服務。
-- 翻譯：以本機 Ollama + IBM Granite 4.2 為預設；禁止使用中國開發的模型。
-- 上游同步：只抓取變動的 Markdown，不下載整包原始 Repository。
-- 授權：保留 Datawhale China／Hello Claw 的來源、作者署名及 CC BY-NC-SA 4.0 改作條件。正式公開前仍須逐項確認第三方圖片及嵌入素材授權。
+- 翻譯模型：以本機 Ollama + IBM Granite 為預設；不使用中國開發的模型。
+- 原始教材同步：計畫採 Git commit 差異比對，只抓變動 Markdown，不下載整包 ZIP。
+- 授權：保留 Datawhale China／Hello Claw 的來源、作者署名及 CC BY-NC-SA 4.0 改作條件。第三方圖片與嵌入素材須另行確認授權。
 
 ## 原始來源
 
 - 上游教材：https://github.com/datawhalechina/hello-claw
+- 原始網站：https://datawhalechina.github.io/hello-claw/
 - OpenClaw 官方文件：https://docs.openclaw.ai/
-- 本 Repository：https://github.com/b101113002/openclaw_tryweb
