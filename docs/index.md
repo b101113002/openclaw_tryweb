@@ -20,3 +20,8 @@ hero:
       text: 深入 Agent 架構
       link: /build/intro/
 ---
+
+
+## 本機 AI Agent 實驗室
+
+想從單一功能助理開始，逐步組合多 Agent 團隊與個人 AI 工作台？前往[本機 AI Agent 實驗室](/agent-lab/)，可閱讀教學並下載繁體中文 Agent 範例設定。

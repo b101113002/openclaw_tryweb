@@ -53,7 +53,7 @@ description: 從單功能助理、多 Agent 團隊到個人 AI 工作台，學�
 
 <Badge type="success">Starter Pack v0.1.0</Badge>
 
-[下載本機 Agent 範例套件（ZIP）](https://github.com/b101113002/openclaw_tryweb/raw/refs/heads/main/examples/downloads/openclaw-agent-lab-starter-v0.1.0.zip)
+[下載完整範例專案 ZIP（包含 Agent 實驗室）](https://github.com/b101113002/openclaw_tryweb/archive/refs/heads/main.zip)
 
 [瀏覽 GitHub 範例原始檔](https://github.com/b101113002/openclaw_tryweb/tree/main/examples/agent-lab)
 
