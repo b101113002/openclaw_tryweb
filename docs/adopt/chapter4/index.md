@@ -14,4 +14,4 @@
 - 執行任何安裝或管理命令前，請先核對 [OpenClaw 官方文件](https://docs.openclaw.ai/)。
 - 請勿將 API Key、密碼、Token 或個人資料提交到公開 Repository。
 
-本頁屬於「領養 OpenClaw 使用篇」教材。翻譯完成後會補上原文 commit、查核日期及更新紀錄。
+本頁屬於「領養 OpenClaw 使用篇」。翻譯完成後會補上原文 commit、查核日期及更新紀錄。

@@ -43,7 +43,7 @@ features:
 
 ## 學習路徑
 
-- **第一次接觸 OpenClaw：** 從[使用篇導覽](/adopt/intro)開始，先了解安裝與基本設定。
+- **第一次接觸 OpenClaw：** 從[使用篇導覽](/adopt/intro)開始。
 - **想完成一項工作流程：** 到[龍蝦大學](/university/intro)選擇對應情境。
 - **想了解 Agent 如何運作：** 閱讀[開發篇導覽](/build/intro)，再深入架構章節。
 
