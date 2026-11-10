@@ -57,6 +57,14 @@ description: 從單功能助理、多 Agent 團隊到個人 AI 工作台，學�
 
 [瀏覽 GitHub 範例原始檔](https://github.com/b101113002/openclaw_tryweb/tree/main/examples/agent-lab)
 
+| 範例 | 直接下載設定檔 |
+|---|---|
+| 論文閱讀助理 | [AGENTS.md](https://raw.githubusercontent.com/b101113002/openclaw_tryweb/main/examples/agent-lab/single/paper-reader/AGENTS.md) · [SOUL.md](https://raw.githubusercontent.com/b101113002/openclaw_tryweb/main/examples/agent-lab/single/paper-reader/SOUL.md) · [Skill](https://raw.githubusercontent.com/b101113002/openclaw_tryweb/main/examples/agent-lab/single/paper-reader/skills/paper-review/SKILL.md) |
+| 會議紀錄助理 | [AGENTS.md](https://raw.githubusercontent.com/b101113002/openclaw_tryweb/main/examples/agent-lab/single/meeting-scribe/AGENTS.md) · [SOUL.md](https://raw.githubusercontent.com/b101113002/openclaw_tryweb/main/examples/agent-lab/single/meeting-scribe/SOUL.md) · [Skill](https://raw.githubusercontent.com/b101113002/openclaw_tryweb/main/examples/agent-lab/single/meeting-scribe/skills/meeting-minutes/SKILL.md) |
+| 程式碼審查助理 | [AGENTS.md](https://raw.githubusercontent.com/b101113002/openclaw_tryweb/main/examples/agent-lab/single/code-reviewer/AGENTS.md) · [SOUL.md](https://raw.githubusercontent.com/b101113002/openclaw_tryweb/main/examples/agent-lab/single/code-reviewer/SOUL.md) · [Skill](https://raw.githubusercontent.com/b101113002/openclaw_tryweb/main/examples/agent-lab/single/code-reviewer/skills/review-diff/SKILL.md) |
+| 文件整理助理 | [AGENTS.md](https://raw.githubusercontent.com/b101113002/openclaw_tryweb/main/examples/agent-lab/single/document-organizer/AGENTS.md) · [SOUL.md](https://raw.githubusercontent.com/b101113002/openclaw_tryweb/main/examples/agent-lab/single/document-organizer/SOUL.md) · [Skill](https://raw.githubusercontent.com/b101113002/openclaw_tryweb/main/examples/agent-lab/single/document-organizer/skills/document-index/SKILL.md) |
+| 多 Agent 研究團隊 | [設定參考 JSON5](https://raw.githubusercontent.com/b101113002/openclaw_tryweb/main/examples/agent-lab/config/multi-agent-research-team.json5) |
+
 套件內含單功能 Agent、多 Agent 研究小組、個人工作台、Skills 範例及設定參考。使用前請先閱讀套件中的 README，不要直接以範例設定覆蓋既有的 `~/.openclaw/openclaw.json`。
 
 ## 本機模型：先選能符合硬體的模型

@@ -1,6 +1,9 @@
 // 參考設定：合併前請先備份目前 openclaw.json，並核對 OpenClaw 版本。
 {
   tools: {
+    sessions: {
+      visibility: "all"
+    },
     agentToAgent: {
       enabled: true,
       allow: ["research-coordinator", "source-reader", "fact-checker", "report-editor"]
@@ -14,7 +17,7 @@
         agentDir: "~/.openclaw/agents/research-coordinator/agent",
         tools: {
           profile: "messaging",
-          allow: ["sessions_spawn", "sessions_yield", "subagents", "sessions_list", "sessions_send", "sessions_history", "session_status", "read"],
+          allow: ["sessions_list", "sessions_send", "sessions_history", "session_status", "read"],
           deny: ["exec", "process", "write", "edit", "apply_patch", "browser", "gateway"]
         }
       },

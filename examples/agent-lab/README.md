@@ -16,7 +16,7 @@
 
 ## 重要：這不是一鍵安裝器
 
-本套件只有提示檔、Markdown Skills 與設定範例，不會安裝程式、下載模型、連接外部帳號或執行 Shell 命令。使用者應先閱讀並自行選擇要複製的檔案。
+本範例資料位於 examples/agent-lab/；可透過 GitHub 的 Download ZIP 下載完整 Repository，或從網站中的原始檔連結個別下載。套件只有提示檔、Markdown Skills 與設定範例，不會安裝程式、下載模型、連接外部帳號或執行 Shell 命令。使用者應先閱讀並自行選擇要複製的檔案。
 
 ## 建議安裝方式
 
@@ -66,7 +66,7 @@
 
 ## 多 Agent 範例
 
-多 Agent 設定位於 config/multi-agent-research-team.json5。範例使用獨立 workspace 與 agentDir，並限制 agentToAgent 互通名單。請先理解 Agent ID、工作區與認證儲存區的關係，再手動合併。
+多 Agent 設定位於 config/multi-agent-research-team.json5。範例使用獨立 workspace 與 agentDir，並限制 agentToAgent 互通名單。協調者可使用 sessions_send，傳送至目標 Agent 的 main session；請勿為了方便而開放所有 Agent 互讀所有會話。請先理解 Agent ID、工作區與認證儲存區的關係，再手動合併。
 
 ## 使用限制
 
