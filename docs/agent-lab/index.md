@@ -1,11 +1,11 @@
 ---
-title: Agent 實作工作室
+title: OpenClaw 進階 Agent 工作室
 description: 從單功能助理、多 Agent 團隊到個人 AI 工作台，學習並下載可在本機運作的 OpenClaw 範例。
 ---
 
-# Agent 實作工作室
+# OpenClaw 進階 Agent 工作室
 
-這個工作室提供可閱讀、可修改、可自行測試的本機 Agent 範例。學習順序是：先讓一個 Agent 專心做好一件事，再學習多 Agent 分工，最後組成個人 AI 工作台。
+這裡保留原有 OpenClaw Agent 範例，定位為進階選修。新手請先完成[本機 AI 入門課程](/guide/)，使用 AnythingLLM 建立聊天、文件問答與第一個 Agent，再回到這裡學習 Gateway、Skill 與多 Agent。
 
 <Badge type="success">本機優先</Badge> <Badge type="info">繁體中文範例</Badge> <Badge type="warning">需要自行檢查權限</Badge>
 
@@ -65,37 +65,37 @@ description: 從單功能助理、多 Agent 團隊到個人 AI 工作台，學�
 
 套件內含單功能 Agent、多 Agent 研究小組、個人工作台、Skills 範例及設定參考。使用前請先閱讀套件中的 README，不要直接以範例設定覆蓋既有的 `~/.openclaw/openclaw.json`。
 
-## 本機模型：先選能符合硬體的模型
+## 進階本機模型：先選能符合硬體的模型
 
-OpenClaw 官方文件支援透過 Ollama 連接本機模型。設定時請確認選擇 **Local only（僅本機）**，並實際檢查請求是否送往本機端點，避免誤以為資料一定不會離開電腦。
+本工作室不把所有公開權重模型都稱為完整開源。請依模型卡確認權重授權、來源與訓練資料公開程度。本站不提供中國開發模型的設定範例。
+
+本工作室以本機模型為優先。若沿用 OpenClaw，官方文件支援 Ollama 等本機推論服務；設定時確認選擇 **Local only（僅本機）**，並實際檢查請求是否送往本機端點。
 
 | 模型家族 | 可以先測試的方向 | 注意事項 |
 |---|---|---|
-| Google Gemma 4 | 小型 E2B／E4B 或較大的 12B 版本 | 依模型大小與量化版本選擇硬體 |
-| IBM Granite 4 | 小型模型做摘要、分類與資訊擷取 | 繁體中文品質需自行實測 |
-| Mistral Small 3.2 | 較高資源設備上的工具呼叫與複雜指令 | 下載大小不等於實際 RAM／VRAM 需求 |
-| Meta Llama 3.3 | 高資源設備上的一般文字任務 | 70B 版本不適合所有個人電腦 |
+| Google Gemma 4 | 小型 E2B／E4B 或較大的 12B 版本 | 官方模型卡標示 Apache 2.0；依模型大小與量化版本選擇硬體 |
+| IBM Granite 4.0-H Tiny | 本機摘要、分類與工具呼叫測試 | 官方授權 Apache 2.0；仍需實測繁體中文品質 |
 
 模型下載大小不等於實際記憶體需求。上下文越長、同時執行的 Agent 越多，記憶體需求也會增加。工具呼叫是否正常，應以實際任務測試確認，不要只看模型能否成功載入。
 
 ### 快速開始
 
-先安裝並啟動 Ollama，再下載你選擇的模型。例如：
+若選擇 Ollama 進階路線，先安裝並啟動 Ollama，再下載已確認來源及授權的模型。例如：
 
 ```bash
 ollama pull gemma4:e4b
 ```
 
-接著依照 [Ollama Provider 官方設定](https://docs.openclaw.ai/providers/ollama/setup)執行初始設定，選擇 Local only，完成後檢查：
+接著依照 [Ollama Provider 官方設定](https://docs.openclaw.ai/providers/ollama/setup)將服務連接至 OpenClaw，並選擇 Local only，完成後檢查：
 
 ```bash
 openclaw models list
 openclaw agents list
 ```
 
-## 安裝範例的通用流程
+## 安裝 OpenClaw 範例的流程
 
-1. 先完成 [OpenClaw 入門課程](/guide/)。
+1. 先完成[本機 AI 入門課程](/guide/)。
 2. 確認模型端點與資料路徑，再測試工具呼叫。
 3. 將範例套件解壓縮，選擇一個範例，不要一次匯入全部。
 4. 為範例建立獨立工作區，例如 `~/.openclaw/workspace-paper-reader`。

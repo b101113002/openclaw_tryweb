@@ -7,7 +7,7 @@ const copied = ref(false)
 
 const section = computed(() => {
   const path = page.value.relativePath || ''
-  if (path.startsWith('guide/')) return { label: 'OpenClaw 入門', href: '/guide/' }
+  if (path.startsWith('guide/')) return { label: '本機 AI 入門', href: '/guide/' }
   if (path.startsWith('adopt/')) return { label: '舊版教材整理', href: '/adopt/intro/' }
   if (path.startsWith('university/')) return { label: '實戰專題', href: '/university/intro/' }
   if (path.startsWith('build/')) return { label: '進階開發', href: '/build/intro/' }
@@ -36,7 +36,7 @@ function printPage() {
 <template>
   <div class="article-toolbar">
     <div class="article-crumbs">
-      <span class="crumb-brand">OPENCLAW FIELD GUIDE</span>
+      <span class="crumb-brand">LOCAL AI FIELD GUIDE</span>
       <span class="crumb-separator">/</span>
       <a :href="withBase(section.href)">{{ section.label }}</a>
       <span class="crumb-separator">/</span>

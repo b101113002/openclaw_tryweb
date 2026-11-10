@@ -7,54 +7,63 @@ type ModeId = 'starter' | 'practice' | 'builder'
 const modes = [
   {
     id: 'starter' as ModeId,
-    label: '新手入門',
+    label: '本機 AI 入門',
     icon: '01',
-    title: '先理解，再安裝，最後完成自己的第一個助理。',
-    description: '從 OpenClaw 的運作方式開始，依照環境檢查、安裝、初次設定與安全檢查逐步完成。',
+    title: '先在自己的電腦，建立第一個 AI 對話室。',
+    description: '用一套開源桌面程式開始，載入本機模型，不必先註冊雲端 AI 帳號或申請 API Key。',
     cards: [
-      { number: '01', eyebrow: 'FOUNDATION', title: '認識 OpenClaw', detail: '先理解 Gateway、Agent、模型、聊天渠道與工具之間的關係。', badge: '原創教學', tone: 'lime', href: '/guide/what-is-openclaw/', action: '理解核心架構' },
-      { number: '02', eyebrow: 'INSTALL', title: '準備環境並安裝', detail: '確認 Node.js、作業系統與模型連線方式，再執行官方安裝流程。', badge: '操作教學', tone: 'blue', href: '/guide/install/', action: '開始安裝準備' },
-      { number: '03', eyebrow: 'FIRST RUN', title: '完成第一次對話', detail: '設定 Gateway、開啟控制介面，並用安全的測試任務確認一切正常。', badge: '操作教學', tone: 'coral', href: '/guide/first-assistant/', action: '建立第一個助理' }
+      { number: '01', eyebrow: 'LOCAL FIRST', title: '認識本機 AI 工作站', detail: '了解對話介面、模型執行引擎、文件知識庫與網路搜尋的分工。', badge: '原創教學', tone: 'lime', href: '/guide/what-is-openclaw/', action: '了解整體架構' },
+      { number: '02', eyebrow: 'INSTALL', title: '安裝 AnythingLLM Desktop', detail: '先使用一套桌面程式與內建本機推論，不需要先安裝多個服務。', badge: '免註冊起步', tone: 'blue', href: '/guide/install/', action: '開始安裝' },
+      { number: '03', eyebrow: 'FIRST CHAT', title: '完成第一次本機對話', detail: '下載模型、建立工作區、測試聊天與文件問答。', badge: '操作教學', tone: 'coral', href: '/guide/first-assistant/', action: '建立對話室' }
     ]
   },
   {
     id: 'practice' as ModeId,
-    label: '情境實戰',
+    label: '對話與網路研究',
     icon: '02',
-    title: '把 AI 助理放進每天真的會做的事。',
-    description: '從郵件、行事曆到知識庫與研究流程，先挑一個需求，再逐步擴充自動化。',
+    title: '讓本機 AI 讀懂文件，也能幫你查網路資料。',
+    description: '從個人文件問答開始，再啟用網路搜尋與網頁擷取；每個重要結論都要能回到原始來源。',
     cards: [
-      { number: '01', eyebrow: 'WORKFLOW', title: '郵件與日常摘要', detail: '整理收件匣、彙整重點，建立每天都能使用的工作流程。', badge: '專題規劃中', tone: 'lime', href: '/university/email-assistant/', action: '查看專題入口' },
-      { number: '02', eyebrow: 'PRODUCTIVITY', title: '行事曆與會議管理', detail: '整合日程、會議準備與會後紀錄，減少重複行政工作。', badge: '專題規劃中', tone: 'blue', href: '/university/calendar-ops/', action: '查看專題入口' },
-      { number: '03', eyebrow: 'KNOWLEDGE', title: '建立可檢索的知識庫', detail: '把文件、研究資料與團隊知識整理成可查詢的工作空間。', badge: '專題規劃中', tone: 'coral', href: '/university/knowledge-base/', action: '查看專題入口' }
+      { number: '01', eyebrow: 'KNOWLEDGE', title: '建立本機文件知識庫', detail: '匯入 PDF、筆記與專案文件，練習 RAG 與來源引用。', badge: '文件問答', tone: 'lime', href: '/guide/first-assistant/', action: '建立知識工作區' },
+      { number: '02', eyebrow: 'WEB RESEARCH', title: '免 API Key 網路搜尋', detail: '使用 AnythingLLM 內建 DuckDuckGo 搜尋，了解限制與來源查核。', badge: '免申請額度', tone: 'blue', href: '/guide/web-research/', action: '開始網路研究' },
+      { number: '03', eyebrow: 'MODEL CHOICE', title: '選擇非中國開發模型', detail: '以 Google Gemma 與 IBM Granite 為優先候選，檢查授權與硬體需求。', badge: '模型白名單', tone: 'coral', href: '/guide/models/', action: '查看模型選擇' }
     ]
   },
   {
     id: 'builder' as ModeId,
-    label: '進階開發',
+    label: 'Agent 自動化',
     icon: '03',
-    title: '從使用者，走進 Agent 系統內部。',
-    description: '理解 Agent、工具與 Gateway 的分工，再動手擴充自己的 Skill。',
+    title: '從聊天升級成會查資料、會使用工具的 AI Agent。',
+    description: '先使用 AnythingLLM 內建 Agent，再進一步學習 MCP、SearXNG 與 OpenClaw 等進階架構。',
     cards: [
-      { number: '01', eyebrow: 'ARCHITECTURE', title: '理解 Agent 系統架構', detail: '建立訊息、路由、工作階段與工具執行的整體心智模型。', badge: '進階導覽', tone: 'lime', href: '/build/intro/', action: '進入進階開發' },
-      { number: '02', eyebrow: 'CORE CONCEPTS', title: '拆解工具與權限', detail: '理解工具政策、沙箱與不同 Agent 的工作範圍。', badge: '章節規劃中', tone: 'blue', href: '/build/chapter1/', action: '查看章節入口' },
-      { number: '03', eyebrow: 'MAKE A SKILL', title: '親手開發 Skill', detail: '從需求、工具介面到測試，練習把能力封裝成可重用模組。', badge: '實作入口', tone: 'coral', href: '/build/skill-practice/', action: '開始實作' }
+      { number: '01', eyebrow: 'AGENT', title: '啟用本機 AI Agent', detail: '讓 Agent 搜尋網頁、擷取內容、整理文件與產生報告。', badge: '工具實作', tone: 'lime', href: '/guide/agent-workflows/', action: '開始 Agent 實作' },
+      { number: '02', eyebrow: 'OPEN SEARCH', title: '自架 SearXNG 搜尋', detail: '了解免 API Key 的開源中繼搜尋，並認識上游搜尋引擎的限制。', badge: '進階選修', tone: 'blue', href: '/guide/web-research/', action: '查看搜尋架構' },
+      { number: '03', eyebrow: 'ADVANCED AGENT', title: 'OpenClaw 進階 Agent', detail: '當你需要多渠道、排程與更細緻的工具路由，再學習 OpenClaw。', badge: '進階選修', tone: 'coral', href: '/agent-lab/', action: '進入 Agent 工作室' }
     ]
   }
 ]
 
 const guides = [
-  { title: 'OpenClaw 是什麼？', description: '理解 Gateway、Agent、模型、渠道與工具如何合作。', status: '原創教學', href: '/guide/what-is-openclaw/', tags: '入門 概念 架構 gateway agent channel tool' },
-  { title: '安裝前準備與環境檢查', description: '確認 Node.js、作業系統、模型與部署方式。', status: '操作教學', href: '/guide/install/', tags: '安裝 node mac windows linux wsl2' },
-  { title: '完成第一次對話', description: '執行 onboarding、檢查 Gateway 並開啟控制介面。', status: '操作教學', href: '/guide/first-assistant/', tags: 'onboard gateway dashboard 第一次' },
-  { title: '建立安全的使用邊界', description: '認識配對、允許清單、工具權限與提示詞注入。', status: '安全教學', href: '/guide/safety/', tags: 'security 安全 prompt injection 沙箱 權限' },
-  { title: 'Agent 實作工作室', description: '從單功能助理到多 Agent 協作的本機範例。', status: '範例套件', href: '/agent-lab/', tags: 'agent lab 多智能體 範例' },
-  { title: '郵件與日常摘要', description: '把收件匣整理與每日摘要設計成可驗證的流程。', status: '實戰專題', href: '/university/email-assistant/', tags: 'email 郵件 摘要' },
-  { title: '進階開發導覽', description: '深入理解 OpenClaw 架構、工具與 Skill。', status: '進階課程', href: '/build/intro/', tags: '開發 架構 skill' },
-  { title: 'Skill 開發實作', description: '將重複任務封裝成可重用的技能。', status: '實作入口', href: '/build/skill-practice/', tags: 'skill 技能 開發' },
+  { title: '認識本機 AI 工作站', description: '了解對話介面、模型執行引擎、知識庫與網路搜尋。', status: '原創教學', href: '/guide/what-is-openclaw/', tags: '本機 ai local first 架構 anythingllm' },
+  { title: '安裝 AnythingLLM Desktop', description: '使用一套桌面程式開始，不必先註冊雲端服務。', status: '操作教學', href: '/guide/install/', tags: '安裝 desktop windows mac linux' },
+  { title: '完成第一次本機對話', description: '下載模型、建立工作區、測試聊天與文件問答。', status: '操作教學', href: '/guide/first-assistant/', tags: '聊天 對話室 文件 pdf rag' },
+  { title: '免 API Key 網路研究', description: '使用內建搜尋或自架 SearXNG，查找並交叉確認資料。', status: '網路搜尋', href: '/guide/web-research/', tags: 'web search duckduckgo searxng' },
+  { title: '選擇非中國開發模型', description: 'Gemma 與 Granite 的授權、尺寸與硬體考量。', status: '模型選擇', href: '/guide/models/', tags: 'gemma granite apache 2 model' },
+  { title: '本機 AI Agent 工作流程', description: '讓 Agent 使用工具查資料、擷取網頁與整理檔案。', status: 'Agent 實作', href: '/guide/agent-workflows/', tags: 'agent tool mcp browser' },
+  { title: '建立安全的使用邊界', description: '檢查檔案權限、網路搜尋、工具執行與提示詞注入。', status: '安全教學', href: '/guide/safety/', tags: 'security 安全 prompt injection 權限' },
+  { title: 'OpenClaw 進階 Agent 工作室', description: '下載多 Agent、Skill 與工作區設定範例。', status: '進階範例', href: '/agent-lab/', tags: 'openclaw 多智能體 agent skill' },
   { title: '繁中術語表', description: '查詢本站採用的台灣繁體中文術語。', status: '參考資源', href: '/reference/glossary', tags: '名詞 術語' },
   { title: '教材狀態與更新紀錄', description: '區分原創教學、上游參考資料與待整理內容。', status: '透明追蹤', href: '/reference/translation-status', tags: '進度 更新 changelog' }
 ]
+
+const progressKey = 'local-open-source-ai-learning-v1'
+const tasks = ref([
+  { id: 'desktop', label: '安裝 AnythingLLM Desktop', done: false },
+  { id: 'model', label: '下載並啟用非中國開發的本機模型', done: false },
+  { id: 'chat', label: '完成第一次對話與文件問答', done: false },
+  { id: 'search', label: '測試網路搜尋並檢查原始來源', done: false },
+  { id: 'safety', label: '檢查 Agent 工具與檔案權限', done: false }
+])
 
 const activeMode = ref<ModeId>('starter')
 const activePath = computed(() => modes.find((mode) => mode.id === activeMode.value) || modes[0])
@@ -66,13 +75,6 @@ const searchResults = computed(() => {
   return guides.filter((guide) => (guide.title + ' ' + guide.description + ' ' + guide.status + ' ' + guide.tags).toLocaleLowerCase().includes(query))
 })
 
-const progressKey = 'openclaw-zh-tw-learning-checklist-v2'
-const tasks = ref([
-  { id: 'install', label: '完成 OpenClaw 安裝與版本檢查', done: false },
-  { id: 'onboard', label: '完成初次設定並確認模型連線', done: false },
-  { id: 'test', label: '在控制介面完成第一次對話', done: false },
-  { id: 'security', label: '檢查 Gateway、渠道與工具權限', done: false }
-])
 const completedCount = computed(() => tasks.value.filter((task) => task.done).length)
 const progress = computed(() => Math.round((completedCount.value / tasks.value.length) * 100))
 
@@ -109,26 +111,18 @@ watch(tasks, (value) => {
   }
 }, { deep: true })
 
-const copyMessage = ref('')
-async function copyCommand() {
-  try {
-    await navigator.clipboard.writeText('openclaw onboard')
-    copyMessage.value = '已複製指令'
-  } catch {
-    copyMessage.value = '請手動選取指令複製'
-  }
-}
+
 </script>
 
 <template>
   <section class="home-experience">
     <div class="home-wrap">
       <section class="home-proof" aria-label="網站內容概況">
-        <div class="proof-item"><span class="proof-value">04</span><span class="proof-label">篇原創入門教學</span></div>
+        <div class="proof-item"><span class="proof-value">07</span><span class="proof-label">個本機實作單元</span></div>
         <div class="proof-divider"></div>
-        <div class="proof-item"><span class="proof-value">01</span><span class="proof-label">套 Agent 範例工作室</span></div>
+        <div class="proof-item"><span class="proof-value">02</span><span class="proof-label">個模型家族白名單</span></div>
         <div class="proof-divider"></div>
-        <div class="proof-item"><span class="proof-value">20</span><span class="proof-label">個實戰專題入口</span></div>
+        <div class="proof-item"><span class="proof-value">01</span><span class="proof-label">套主力桌面工作台</span></div>
         <div class="proof-note"><span class="status-dot"></span><span>教材持續查核與更新</span></div>
       </section>
 
@@ -183,11 +177,11 @@ async function copyCommand() {
         <div class="search-panel">
           <label class="search-box">
             <span class="search-icon" aria-hidden="true">⌕</span>
-            <input ref="searchInput" v-model="searchQuery" type="search" placeholder="試試搜尋：安裝、Gateway、Telegram、Skill…" aria-label="搜尋教學內容" />
+            <input ref="searchInput" v-model="searchQuery" type="search" placeholder="試試搜尋：本機模型、AnythingLLM、SearXNG、Agent…" aria-label="搜尋教學內容" />
             <button v-if="searchQuery" type="button" class="clear-search" @click="searchQuery = ''">清除</button>
             <kbd>⌘ K</kbd>
           </label>
-          <div class="search-meta"><span>{{ searchResults.length }} 個相關入口</span><span>目前收錄 10 個常用導覽</span></div>
+          <div class="search-meta"><span>{{ searchResults.length }} 個相關入口</span><span>目前收錄 10 個常用入口</span></div>
           <div v-if="searchResults.length" class="search-results">
             <a v-for="guide in searchResults" :key="guide.href" class="search-result" :href="withBase(guide.href)">
               <span class="result-arrow">↗</span>
@@ -195,7 +189,7 @@ async function copyCommand() {
               <span class="result-status">{{ guide.status }}</span>
             </a>
           </div>
-          <div v-else class="empty-search">找不到完全相符的內容。試試「安裝」、「模型」、「聊天平台」或「Skill」。</div>
+          <div v-else class="empty-search">找不到完全相符的內容。試試「AnythingLLM」、「Gemma」、「網路搜尋」或「Agent」。</div>
         </div>
       </section>
 
@@ -203,7 +197,7 @@ async function copyCommand() {
         <div class="section-heading">
           <div>
             <p class="section-kicker">MAKE IT HAPPEN</p>
-            <h2>建立自己的第一個 OpenClaw 工作空間</h2>
+            <h2>建立自己的本機 AI 工作空間</h2>
             <p class="section-desc">依序完成這份小清單。勾選進度只會保存在目前瀏覽器，不需要註冊帳號。</p>
           </div>
           <span class="section-index">03 / 03</span>
@@ -212,7 +206,7 @@ async function copyCommand() {
         <div class="workspace-grid">
           <div class="checklist-panel">
             <div class="checklist-header">
-              <div><p class="panel-overline">YOUR CHECKLIST</p><h3>入門進度</h3></div>
+              <div><p class="panel-overline">YOUR CHECKLIST</p><h3>本機 AI 進度</h3></div>
               <div class="progress-ring" :style="{ '--progress': progress + '%' }"><span>{{ progress }}%</span></div>
             </div>
             <div class="checklist-items">
@@ -228,14 +222,14 @@ async function copyCommand() {
           <div class="terminal-panel">
             <div class="terminal-top">
               <div class="terminal-dots"><i></i><i></i><i></i></div>
-              <span>TERMINAL / QUICK START</span>
+              <span>ONE APP / QUICK START</span>
               <span class="terminal-live"><b></b> READY</span>
             </div>
             <div class="terminal-body">
-              <p class="terminal-comment"># 已完成安裝？啟動 OpenClaw 初次設定：</p>
-              <div class="terminal-command"><span><em>$</em> openclaw onboard</span><button type="button" @click="copyCommand" aria-label="複製 openclaw onboard 指令">複製</button></div>
-              <p class="terminal-hint">{{ copyMessage || '依照設定精靈確認模型、工作區與 Gateway。' }}</p>
-              <a :href="withBase('/guide/first-assistant/') " class="terminal-doc-link">閱讀第一次啟動教學 <span>↗</span></a>
+              <p class="terminal-comment"># 從一套本機桌面程式開始，不需要註冊雲端帳號：</p>
+              <div class="terminal-command"><span><em>↗</em> AnythingLLM Desktop</span><a href="https://anythingllm.com/download" target="_blank" rel="noreferrer">官方下載</a></div>
+              <p class="terminal-hint">安裝後選擇內建本機模型引擎，模型來源指定 Hugging Face；不使用自動切換到 ModelScope 的來源設定。</p>
+              <a :href="withBase('/guide/install/') " class="terminal-doc-link">查看安裝與本機模型設定 <span>↗</span></a>
             </div>
           </div>
         </div>
@@ -245,14 +239,14 @@ async function copyCommand() {
         <div class="principle-mark" aria-hidden="true">✳</div>
         <div>
           <p class="principle-title">本機優先．權限最小化．來源透明</p>
-          <p class="principle-desc">本站以原創教學與可重現範例為主，使用 OpenClaw 官方文件查核指令與設定；舊版上游教材另列參考，避免混淆內容來源。</p>
+          <p class="principle-desc">本站以本機開源軟體、非中國開發的公開權重模型與可查核的網路研究流程為主。雲端 API、註冊額度與綁卡服務不列為入門必需。</p>
         </div>
         <a :href="withBase('/reference/translation-status')">查看教材狀態 <span>↗</span></a>
       </section>
 
       <footer class="home-footer">
-        <span>OPENCLAW · TRADITIONAL CHINESE FIELD GUIDE</span>
-        <span>獨立社群教學與範例專案，非 OpenClaw 官方網站。</span>
+        <span>LOCAL OPEN-SOURCE AI · TRADITIONAL CHINESE GUIDE</span>
+        <span>獨立社群教學專案，非任何軟體官方網站。</span>
         <a :href="withBase('/about/source-license')">來源與授權</a>
       </footer>
     </div>
