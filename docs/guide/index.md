@@ -8,7 +8,7 @@
 |---|---|---|---|
 | 對話介面與工作區 | AnythingLLM Desktop（MIT） | 聊天、文件問答、Agent 操作 | 不需要建立雲端帳號 |
 | 本機推論 | AnythingLLM 內建引擎（Lemonade／llama.cpp） | 在自己的電腦載入模型 | 不需要模型 API Key |
-| 本機模型 | Google Gemma 4、IBM Granite 4.0 | 文字與工具任務 | 公開權重可下載；依個別模型授權使用 |
+| 本機模型 | Google Gemma 4、IBM Granite 4.2 | 文字、圖片理解、工具任務 | 公開權重可下載；依個別模型授權使用 |
 | 網路搜尋 | AnythingLLM 內建 DuckDuckGo | 讓 Agent 搜尋網頁 | 不需 API Key，但仍受上游服務可用性影響 |
 | 進階搜尋 | SearXNG（AGPL-3.0） | 自行架設中繼搜尋服務 | 不需商業搜尋 API Key；上游搜尋引擎可能限流 |
 | 進階 Agent | OpenClaw（MIT） | 多渠道、排程、工具路由與多 Agent | 可連接本機模型；不必先用雲端模型 |
@@ -44,4 +44,4 @@
 
 ## 下一步
 
-先閱讀[認識本機 AI 工作站](/guide/what-is-openclaw/)，再依照自己的硬體完成[AnythingLLM Desktop 安裝](/guide/install/)。
+先閱讀[認識本機 AI 工作站](/guide/what-is-openclaw/)，再依照自己的硬體完成[AnythingLLM Desktop 安裝](/guide/install/)，接著查看[模型與硬體選型表](/guide/models/)。
