@@ -11,11 +11,11 @@
 | 02｜安裝 AnythingLLM Desktop | <Badge type="success">已完成初版</Badge> | 以單一桌面程式起步，固定模型來源為 Hugging Face。 |
 | 03｜完成第一次本機對話 | <Badge type="success">已完成初版</Badge> | 建立工作區、聊天與文件問答。 |
 | 04｜網路搜尋與資料查核 | <Badge type="success">已完成初版</Badge> | 介紹免 API Key 搜尋、SearXNG 選修與來源查核。 |
-| 05｜選擇非中國開發模型 | <Badge type="success">已完成初版</Badge> | 優先列出 Google Gemma 4 與 IBM Granite 4.0。 |
+| 05｜選擇非中國開發模型 | <Badge type="success">已更新選型指南</Badge> | 更新 Gemma 4 與 Granite 4.2，補上硬體估算、模型來源及實測方法。 |
 | 06｜建立 AI Agent 工作流程 | <Badge type="success">已完成初版</Badge> | 介紹 AnythingLLM Agent、MCP 與 OpenClaw 進階路線。 |
 | 07｜安全與資料邊界 | <Badge type="success">已完成初版</Badge> | 區分本機／外部資料流與人工確認。 |
 
-「已完成初版」表示已有可閱讀的教學步驟與官方來源；尚未代表已在所有作業系統、硬體型號與模型組合上完成實測。
+「已完成初版」表示已有可閱讀的教學步驟與官方來源；尚未代表已在所有作業系統、硬體型號與模型組合上完成實測。模型硬體表中的數字是官方估算，使用者仍需在自己的電腦上測試。
 
 ## Agent 實作工作室
 
@@ -24,7 +24,7 @@
 ## 模型白名單原則
 
 - 優先使用非中國開發團隊發布、來源可查、授權明確的公開權重模型。
-- 目前優先候選：Google Gemma 4、IBM Granite 4.0。
+- 目前優先候選：Google Gemma 4、IBM Granite 4.2。
 - AnythingLLM 內建模型來源指定 Hugging Face，不使用會回退至 ModelScope 的 Automatic 設定。
 - 不將 Meta Llama、其他自訂授權模型或僅公開權重的模型直接標示為「完整開源」；需逐一說明授權差異。
 - 不把中國開發的模型或 API Provider 列為教學預設。
@@ -45,9 +45,9 @@ Datawhale China／Hello Claw 早期參考內容保留在「OpenClaw 舊版教材
 - [AnythingLLM 官方文件](https://docs.anythingllm.com/)
 - [AnythingLLM GitHub（MIT）](https://github.com/Mintplex-Labs/anything-llm)
 - [Gemma 4 Model Card（Apache 2.0）](https://ai.google.dev/gemma/docs/core/model_card_4)
-- [IBM Granite 4.0（Apache 2.0）](https://www.ibm.com/granite/docs/models/granite4-0)
+- [IBM Granite 4.2 官方文件（Apache 2.0）](https://www.ibm.com/granite/docs/)
 - [SearXNG 官方文件](https://docs.searxng.org/)
 - [OpenClaw 官方文件](https://docs.openclaw.ai/)
 - [Datawhale China／Hello Claw](https://github.com/datawhalechina/hello-claw)（早期參考教材）
 
-最後查核日期：2026-11-10。
+最後查核日期：2026-11-15。
