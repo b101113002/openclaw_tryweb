@@ -3,7 +3,7 @@ layout: home
 hero:
   name: "Local AI"
   text: "把 AI 留在自己的電腦，也讓它能幫你查資料。"
-  tagline: "從本機 AI 對話室、文件知識庫到開源網路搜尋與 Agent 自動化。以開源軟體、非中國開發模型與免註冊的實作路線為主。"
+  tagline: "從本機 AI 對話室、文件知識庫到開源網路搜尋、Agent 技能與 System Prompt。以開源軟體、非中國開發模型與免註冊的實作路線為主。"
   image:
     src: /hero-mark.svg
     alt: "以環形節點與龍蝦意象構成的本機 AI 學習主視覺"
@@ -37,8 +37,20 @@ hero:
 
 [開始網路研究教學 →](/guide/web-research/)
 
-## 進一步建立 Agent
+## Agent 應用與技能庫
 
-等本機模型與對話室穩定後，再學習工具呼叫、MCP、排程與 OpenClaw 多 Agent。所有高影響操作預設都要有人確認。
+依不同任務選擇 Agent Zero、OpenHands、Flowise 或 OpenClaw；透過 SKILL.md 將常用工作流程模組化，並學會審查第三方技能的來源、授權與腳本。
 
-[進入 Agent 實作課程 →](/guide/agent-workflows/)
+[探索 Agent 應用與技能庫 →](/guide/agent-apps/)
+
+## 寫好 Markdown 與 System Prompt
+
+使用 AGENTS.md 管理專案指示，使用 SKILL.md 定義可重用流程，再把全域角色、工具政策、安全邊界與輸出格式寫進真正載入的 System Prompt。
+
+[開始 Prompt 撰寫教學 →](/guide/prompts/)
+
+## 追蹤新技術
+
+新增 Colibrì 大型 MoE 推論引擎等技術觀測，並定期核對官方版本、相容性與授權，不把中國開發模型混入推薦清單。
+
+[查看新技術觀測 →](/reference/tech-watch/)
