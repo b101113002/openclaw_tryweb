@@ -6,7 +6,7 @@
 
 - **本機 AI 入門**：以 AnythingLLM Desktop 建立 AI 對話室，使用本機模型，完成文件問答與基本操作。
 - **網路搜尋與資料查核**：使用不需搜尋 API Key 的路線，認識 DuckDuckGo、SearXNG 及搜尋引擎限流。
-- **模型選擇**：優先採 Google Gemma 4、IBM Granite 4.0 等非中國開發、授權透明的公開權重模型。
+- **模型選擇**：優先採 Google Gemma 4、IBM Granite 4.2 等非中國開發、授權透明的公開權重模型，並提供硬體選型和測試方法。
 - **Agent 實戰**：先學 AnythingLLM 內建 Agent，再進階使用 MCP、SearXNG 與 OpenClaw。
 - **參考資源**：繁中術語、教材狀態、來源與授權說明。
 
@@ -15,9 +15,10 @@
 ## 預設工具與原則
 
 - AnythingLLM Desktop：MIT 授權；桌面版可免帳號使用，負責聊天、文件與 Agent 介面。
-- AnythingLLM 內建模型引擎：使用 Lemonade／llama.cpp 在本機執行模型。
+- AnythingLLM 內建模型引擎：新版桌面版使用 Lemonade／llama.cpp 在本機執行 GGUF 模型。
 - 模型來源：明確選 Hugging Face，不使用 Automatic → ModelScope fallback。
-- 模型候選：Google Gemma 4、IBM Granite 4.0；逐一標示授權，不把開放權重誤稱為訓練資料完全開放。
+- 模型候選：Google Gemma 4、IBM Granite 4.2；逐一標示授權，不把開放權重誤稱為訓練資料完全開放。
+- 硬體選型：以官方 RAM／VRAM 估算為起點，保留上下文與執行環境所需空間，並以繁體中文與 Agent 工具呼叫實測。
 - 網路搜尋：入門先用 AnythingLLM 內建 DuckDuckGo，進階再自架 SearXNG；不要求申請搜尋 API Key。
 - 高階 Agent：OpenClaw（MIT）作為選修，優先連接本機模型。
 
