@@ -15,7 +15,7 @@ description: 理解本機模型、AI 對話室、文件知識庫、網路搜尋�
 |---|---|---|
 | AI 對話介面 | AnythingLLM Desktop | 管理對話、工作區、文件及 Agent |
 | 本機推論引擎 | AnythingLLM 內建引擎（Lemonade／llama.cpp） | 使用自己的 CPU／GPU 執行模型 |
-| 模型權重 | Gemma 4、Granite 4.0 等 | 生成文字、理解任務、部分模型可呼叫工具 |
+| 模型權重 | Gemma 4、Granite 4.2 等 | 生成文字、理解任務、部分模型可呼叫工具 |
 | 文件知識庫 | AnythingLLM Workspace／RAG | 將自己的 PDF、筆記與文件提供給模型查詢 |
 | 網路搜尋與工具 | 內建 DuckDuckGo；進階可加 SearXNG、MCP 或 OpenClaw | 查詢網頁、擷取資料與執行工作流程 |
 
@@ -63,6 +63,7 @@ AnythingLLM Desktop 是 MIT 授權的開源桌面應用程式，官方提供 Win
 - [AnythingLLM GitHub（MIT）](https://github.com/Mintplex-Labs/anything-llm)
 - [AnythingLLM Desktop 介紹](https://docs.anythingllm.com/installation-desktop/overview)
 - [AnythingLLM 內建本機模型引擎](https://docs.anythingllm.com/setup/llm-configuration/local/built-in)
-- [AnythingLLM Agent 功能](https://docs.anythingllm.com/features/ai-agents)
+- [Google Gemma 4 官方文件](https://ai.google.dev/gemma/docs/core)
+- [IBM Granite 4.2 官方文件](https://www.ibm.com/granite/docs/)
 
-> 本頁查核日期：2026-11-10。
+> 本頁查核日期：2026-11-15。
