@@ -19,7 +19,13 @@ description: 只用一套桌面程式建立本機 AI 對話室，不需要雲端
 
 請只從 AnythingLLM 官方下載頁或 [GitHub 官方 Repository](https://github.com/Mintplex-Labs/anything-llm)取得程式。不要從論壇、網路硬碟或不明整合包下載。
 
-## 2. 第一次啟動
+## 2. 安裝前先確認硬體
+
+AnythingLLM 官方對基本本機 AI 使用建議約為 16 GB RAM 與 8 核心 CPU。Windows 若要使用 GPU 加速，官方建議 8–12 GB 以上 VRAM 會有較好的使用空間；Apple Silicon M 系列也可執行本機模型。
+
+這不是說低於上述規格完全不能啟動，而是模型大小、上下文長度與回覆速度會受到限制。下載前先看[模型與硬體選型表](/guide/models/)，不要先下載十幾 GB 的模型才發現記憶體不足。
+
+## 3. 第一次啟動
 
 1. 安裝並開啟 AnythingLLM Desktop。
 2. 依畫面完成初次設定。
@@ -27,9 +33,9 @@ description: 只用一套桌面程式建立本機 AI 對話室，不需要雲端
 4. 選擇一個非中國開發團隊發布、授權清楚的模型。
 5. 等待模型下載完成，再開啟新工作區。
 
-AnythingLLM 官方表示，桌面版提供本機模型引擎，透過 Lemonade 與 llama.cpp 在 CPU／GPU 上執行；一般使用不需要先安裝 Docker 或資料庫。
+AnythingLLM Desktop 新版內建引擎使用 Lemonade／llama.cpp 在 CPU／GPU 上執行模型；一般使用不需要先安裝 Docker 或資料庫。若升級時看到引擎變更提示，請先閱讀官方更新說明，再確認原先下載的模型是否需要重新下載。
 
-## 3. 把模型下載來源固定為 Hugging Face
+## 4. 把模型下載來源固定為 Hugging Face
 
 AnythingLLM 內建模型引擎的模型來源可在進階設定中選擇：
 
@@ -37,9 +43,11 @@ AnythingLLM 內建模型引擎的模型來源可在進階設定中選擇：
 - Hugging Face：只使用 Hugging Face。
 - ModelScope：使用 ModelScope。
 
-本網站的教學請選擇 **Hugging Face**，不要使用 Automatic，避免連線失敗時自動切換到中國的模型分發平台。下載模型時再確認發布者是 Google、IBM 等官方帳號或經查核的可信任轉換版本。
+本網站的教學請選擇 **Hugging Face**，不要使用 Automatic，避免連線失敗時自動切換到中國的模型分發平台。下載模型時再確認發布者是 Google、IBM 等官方帳號，或已查核來源與授權的轉換版本。
 
-## 4. 先不要安裝額外的雲端 Provider
+AnythingLLM Desktop 新版內建模型可匯入本機 GGUF 檔案，也能從 Hugging Face 匯入 GGUF Repository。請先確認模型量化格式與電腦硬體相容；若模型無法正常載入，不要改用來路不明的重新封裝檔。
+
+## 5. 先不要安裝額外的雲端 Provider
 
 入門階段不需要填入以下資料：
 
@@ -52,7 +60,7 @@ AnythingLLM 內建模型引擎的模型來源可在進階設定中選擇：
 
 AnythingLLM 介面可能會顯示許多雲端 Provider，這不代表你必須使用。本站主線只教本機推論與免 API Key 搜尋。
 
-## 5. 何時需要 Ollama？
+## 6. 何時需要 Ollama？
 
 若你只想在 AnythingLLM 中聊天、整理文件與使用內建 Agent，可以先不安裝 Ollama。
 
@@ -65,20 +73,22 @@ AnythingLLM 介面可能會顯示許多雲端 Provider，這不代表你必須�
 
 Ollama 本身採 MIT 授權，但它是另一個獨立程式，不是 AnythingLLM Desktop 的必要依賴。
 
-## 6. 安裝完成檢查
+## 7. 安裝完成檢查
 
 - [ ] 我從官方下載頁取得 AnythingLLM Desktop。
 - [ ] 桌面程式已成功啟動。
 - [ ] 我選擇內建本機模型引擎。
 - [ ] 模型來源設定為 Hugging Face，而非 Automatic／ModelScope。
 - [ ] 我沒有輸入雲端模型 API Key。
+- [ ] 我已參考硬體需求，挑選適合的量化模型。
 - [ ] 我知道模型權重會占用磁碟空間與 RAM／VRAM。
 
 ## 官方來源
 
 - [AnythingLLM Desktop 下載](https://anythingllm.com/download)
 - [Desktop 安裝說明](https://docs.anythingllm.com/installation-desktop/overview)
-- [內建模型引擎與模型來源設定](https://docs.anythingllm.com/setup/llm-configuration/local/built-in)
+- [內建模型引擎、GGUF 匯入與模型來源設定](https://docs.anythingllm.com/setup/llm-configuration/local/built-in)
 - [AnythingLLM GitHub／MIT License](https://github.com/Mintplex-Labs/anything-llm)
+- [AnythingLLM 系統需求](https://docs.anythingllm.com/installation-desktop/system-requirements)
 
-> 本頁查核日期：2026-11-10。不同桌面版版本的 UI 名稱可能改變，請依官方說明核對。
+> 本頁查核日期：2026-11-15。不同桌面版版本的 UI 名稱可能改變，請依官方說明核對。
