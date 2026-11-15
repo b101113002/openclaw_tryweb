@@ -1,13 +1,13 @@
 ---
 title: 01｜認識本機 AI 工作站
-description: 理解本機模型、AI 對話室、文件知識庫、網路搜尋與 Agent 工具之間的分工。
+description: 理解本機模型、AI 對話室、文件知識庫、開源網路搜尋與 Agent 工具之間的分工。
 ---
 
 # 01｜認識本機 AI 工作站
 
 本機 AI 不只是下載一個模型檔案。要真正用得順手，你需要一個地方跟 AI 對話、一個負責運行模型的引擎、可選擇的文件知識庫，以及讓 Agent 搜尋網路或執行任務的工具。
 
-本站採用「先簡單、再擴充」的方式：先用 AnythingLLM Desktop 建立一個本機 AI 工作區。需要更進一步時，再連接 Ollama、SearXNG、MCP 或 OpenClaw。
+本站採用「先簡單、再擴充」的方式：先用 AnythingLLM Desktop 建立一個本機 AI 工作區。需要網路搜尋時，再連接 SearXNG 與開源 MCP Server；更進一步時，才使用 Ollama、其他 MCP 或 OpenClaw。
 
 ## 五個主要元件
 
@@ -15,13 +15,13 @@ description: 理解本機模型、AI 對話室、文件知識庫、網路搜尋�
 |---|---|---|
 | AI 對話介面 | AnythingLLM Desktop | 管理對話、工作區、文件及 Agent |
 | 本機推論引擎 | AnythingLLM 內建引擎（Lemonade／llama.cpp） | 使用自己的 CPU／GPU 執行模型 |
-| 模型權重 | Gemma 4、Granite 4.0 等 | 生成文字、理解任務、部分模型可呼叫工具 |
+| 模型權重 | Gemma 4、Granite 4.2 等 | 生成文字、理解任務、部分模型可呼叫工具 |
 | 文件知識庫 | AnythingLLM Workspace／RAG | 將自己的 PDF、筆記與文件提供給模型查詢 |
-| 網路搜尋與工具 | 內建 DuckDuckGo；進階可加 SearXNG、MCP 或 OpenClaw | 查詢網頁、擷取資料與執行工作流程 |
+| 開源網路搜尋與工具 | SearXNG + mcp-searxng；便利備用為 DuckDuckGo | 聚合網頁搜尋結果，透過 MCP 交給 Agent 使用 |
 
 ## 資料如何流動？
 
-```text
+~~~text
 你在本機對話室輸入問題
           │
           ▼
@@ -33,18 +33,18 @@ description: 理解本機模型、AI 對話室、文件知識庫、網路搜尋�
           │      └── Gemma／Granite 等模型權重
           │
           └── Agent 工具（需要時）
-                 ├── 網路搜尋
-                 ├── 網頁擷取
+                 ├── 本機 SearXNG MCP
+                 ├── 上游搜尋引擎／網頁
                  └── 其他經授權工具
-```
+~~~
 
-一般聊天與本機文件問答可以完全由本機模型處理。只有當你要求搜尋網頁、下載模型、更新軟體或使用其他網路工具時，才會產生外部網路連線。
+一般聊天與本機文件問答可以完全由本機模型處理。只有當你要求搜尋網頁、下載模型、更新軟體或使用其他網路工具時，才會產生外部網路連線。即使 SearXNG 與 MCP 在本機執行，搜尋查詢仍會送往你設定的上游搜尋引擎。
 
 ## 為什麼先用 AnythingLLM？
 
 AnythingLLM Desktop 是 MIT 授權的開源桌面應用程式，官方提供 Windows、macOS、Linux 版本；桌面版標示不需要註冊、Email 驗證或信用卡。它有本機模型、文件問答與 Agent 功能，適合當作第一個整合式工作台。
 
-本機模型可使用內建引擎，不必一開始就另外安裝 Ollama；若日後想集中管理不同模型或讓多個應用程式共用模型服務，再選擇安裝 Ollama。
+本機模型可使用內建引擎，不必一開始就另外安裝 Ollama；若日後想集中管理不同模型或讓多個應用程式共用模型服務，再選擇安裝 Ollama。若你希望搜尋程式本身也開源，可依第 04 課增加 SearXNG 與 MCP Server。
 
 ## 開源軟體與模型授權要分開看
 
@@ -55,14 +55,15 @@ AnythingLLM Desktop 是 MIT 授權的開源桌面應用程式，官方提供 Win
 - [ ] 我知道對話介面與模型引擎不是同一件事。
 - [ ] 我知道本機模型可以在沒有雲端 API Key 的情況下運作。
 - [ ] 我知道文件問答與網路搜尋是不同的資料來源。
-- [ ] 我知道要求搜尋網頁時，搜尋字詞仍會送到外部搜尋服務。
+- [ ] 我知道 SearXNG 是開源搜尋聚合軟體，但上游網站不一定開源。
 - [ ] 我知道公開權重不等於訓練資料完全公開。
 
 ## 官方來源
 
 - [AnythingLLM GitHub（MIT）](https://github.com/Mintplex-Labs/anything-llm)
 - [AnythingLLM Desktop 介紹](https://docs.anythingllm.com/installation-desktop/overview)
-- [AnythingLLM 內建本機模型引擎](https://docs.anythingllm.com/setup/llm-configuration/local/built-in)
-- [AnythingLLM Agent 功能](https://docs.anythingllm.com/features/ai-agents)
+- [AnythingLLM Desktop MCP](https://docs.anythingllm.com/mcp-compatibility/desktop)
+- [SearXNG 官方文件](https://docs.searxng.org/)
+- [mcp-searxng 原始碼與 MIT License](https://github.com/ihor-sokoliuk/mcp-searxng)
 
-> 本頁查核日期：2026-11-10。
+> 本頁查核日期：2026-11-15。

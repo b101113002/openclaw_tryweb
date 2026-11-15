@@ -1,5 +1,22 @@
 # 更新紀錄
 
+## 2026-11-15｜將開源網路搜尋接入 AnythingLLM Agent
+
+- 調整搜尋教學定位：以 SearXNG（AGPL-3.0）+ mcp-searxng（MIT）作為開源軟體路線，DuckDuckGo 只保留為免設定備用。
+- 新增 SearXNG 官方 Docker Compose 安裝流程、限制本機監聽、JSON 格式設定與服務管理說明。
+- 新增 AnythingLLM Desktop MCP 設定範例，透過 mcp-searxng 連接自架 SearXNG。
+- 補充 Node.js 20+、Docker／Podman 需求，以及上游搜尋引擎仍可能限流的限制。
+- 更新首頁、課程地圖、Agent 課程、README 與教材狀態，避免把第三方非開源搜尋服務稱為全開源方案。
+
+## 2026-11-15｜更新本機模型選型與硬體實測指南
+
+- 將現行 IBM 模型候選更新為 Granite 4.2，避免繼續把 Granite 4.0 當成最新主推版本。
+- 加入 Gemma 4 E2B、E4B、12B 與 Granite 4.2 3B、8B 的官方量化記憶體估算。
+- 新增依系統 RAM、GPU VRAM 與 Apple Silicon 統一記憶體的入門選型表。
+- 加入繁體中文、文件摘要、資料不足判斷、網路來源與 Agent 工具呼叫的實測清單。
+- 補充 AnythingLLM 新版 Lemonade／llama.cpp 內建引擎、Hugging Face GGUF 匯入及 ModelScope fallback 注意事項。
+- 更新安裝課程、學習地圖與 README，讓使用者在下載模型前先核對硬體。
+
 ## 2026-11-10｜課程轉型：本機開源 AI 對話室與 Agent
 
 - 將網站定位改為「本機開源 AI 助理教學」。
@@ -20,7 +37,7 @@
 
 ## 2026-11-10｜Agent 實作工作室與閱讀體驗
 
-- 新增單功能 Agent、多 Agent 研究團隊與個人 AI 工作台範例。
+- 新增單功能 Agent、多 Agent 研究團隊與個人工作台範例。
 - 新增文章閱讀進度、已讀標記、複製連結與列印工具。
 - 新增本機模型與權限安全說明。
 
