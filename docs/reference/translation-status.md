@@ -62,6 +62,6 @@ Datawhale China／Hello Claw 早期參考內容保留在「OpenClaw 舊版教材
 
 新技術觀測頁會定期追蹤 Agent 應用、技能庫、MCP、生態系及本機推論引擎。只有授權、來源、維護狀態與實用性經核對後，才會納入推薦。
 
-[查看新技術觀測](/reference/tech-watch/)
+[查看新技術觀測](/reference/tech-watch)
 
 最後查核日期：2026-11-15。
