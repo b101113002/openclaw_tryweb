@@ -51,7 +51,7 @@ description: 認識 Colibrì 如何把 MoE 專家權重分配到 GPU、RAM 與 N
 
 ## 4. 非中國模型來源白名單：一定要分清引擎與模型
 
-Colibrì 是義大利開發者維護的推論引擎，採 Apache-2.0；但它支援的模型家族同時來自不同國家與團隊。
+Colibrì 是由獨立開發者維護的推論引擎，採 Apache-2.0；但它支援的模型家族同時來自不同國家與團隊。
 
 官方 README 的支援與致謝清單包括中國開發團隊的 GLM（Z.ai）、Kimi（Moonshot AI）、Qwen（Alibaba）、DeepSeek、MiMo（Xiaomi）。依本站政策，**不將這些模型列為推薦或教學預設**。這不表示引擎本身屬於中國模型，而是必須逐一審查引擎所執行的模型來源。
 
