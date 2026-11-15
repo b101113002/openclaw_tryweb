@@ -9,7 +9,11 @@ const guide = [
   { text: '04｜網路搜尋與資料查核', link: '/guide/web-research/' },
   { text: '05｜選擇非中國開發模型', link: '/guide/models/' },
   { text: '06｜建立 AI Agent 工作流程', link: '/guide/agent-workflows/' },
-  { text: '07｜安全與資料邊界', link: '/guide/safety/' }
+  { text: '07｜安全與資料邊界', link: '/guide/safety/' },
+  { text: '08｜AI Agent 應用選擇', link: '/guide/agent-apps/' },
+  { text: '09｜Agent Skills 與技能庫', link: '/guide/skills/' },
+  { text: '10｜Markdown 與 System Prompt', link: '/guide/prompts/' },
+  { text: '11｜Colibrì 與大型 MoE 推論', link: '/guide/colibri/' }
 ]
 const adoptionArchive = [
   { text: '舊版教材導讀', link: '/adopt/intro/' },
@@ -38,10 +42,12 @@ export default defineConfig({
     siteTitle: '本機開源 AI 教學',
     nav: [
       { text: '本機 AI 入門', link: '/guide/' },
+      { text: 'Agent 應用', link: '/guide/agent-apps/' },
+      { text: 'Skills 與 Prompt', link: '/guide/skills/' },
       { text: '實戰專題', link: '/university/intro/' },
       { text: 'Agent 工作室', link: '/agent-lab/' },
       { text: 'OpenClaw 進階', link: '/build/intro/' },
-      { text: '參考資源', link: '/reference/glossary' },
+      { text: '參考資源', link: '/reference/tech-watch' },
       { text: 'GitHub', link: 'https://github.com/b101113002/openclaw_tryweb' }
     ],
     sidebar: {
@@ -51,7 +57,7 @@ export default defineConfig({
       '/build/': [{ text: 'OpenClaw 進階開發', items: build }],
       '/university/': [{ text: '實戰專題', items: projects }],
       '/appendix/': [{ text: '參考附錄', items: appendices }],
-      '/reference/': [{ text: '參考資源', items: [{ text: '繁中術語表', link: '/reference/glossary' }, { text: '教材狀態', link: '/reference/translation-status' }, { text: '更新紀錄', link: '/reference/changelog' }] }]
+      '/reference/': [{ text: '參考資源', items: [{ text: '新技術觀測', link: '/reference/tech-watch' }, { text: '繁中術語表', link: '/reference/glossary' }, { text: '教材狀態', link: '/reference/translation-status' }, { text: '更新紀錄', link: '/reference/changelog' }] }]
     },
     search: { provider: 'local' },
     outline: { level: [2, 3], label: '本頁目錄' },
