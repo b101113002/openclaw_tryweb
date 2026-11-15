@@ -53,4 +53,4 @@ hero:
 
 新增 Colibrì 大型 MoE 推論引擎等技術觀測，並定期核對官方版本、相容性與授權，不把中國開發模型混入推薦清單。
 
-[查看新技術觀測 →](/reference/tech-watch/)
+[查看新技術觀測 →](/reference/tech-watch)
