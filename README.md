@@ -7,7 +7,9 @@
 - **本機 AI 入門**：以 AnythingLLM Desktop 建立 AI 對話室，使用本機模型，完成文件問答與基本操作。
 - **網路搜尋與資料查核**：以自架 SearXNG + MIT 授權 mcp-searxng 接到 AnythingLLM MCP，免商業搜尋 API Key；DuckDuckGo 僅作為便利備用。
 - **模型選擇**：優先採 Google Gemma 4、IBM Granite 4.2 等非中國開發、授權透明的公開權重模型，並提供硬體選型和測試方法。
-- **Agent 實戰**：先學 AnythingLLM 內建 Agent，再整合開源 MCP 工具，進階使用 OpenClaw。
+- **Agent 實戰**：比較 AnythingLLM、Agent Zero、OpenHands、Flowise、Dify 與 OpenClaw，依用途挑選本機工具。
+- **Agent Skills 與 Prompt**：介紹 Agent Skills 開放格式、skills.sh、SKILL.md、AGENTS.md 與 System Prompt 撰寫。
+- **新技術觀測**：每月核對 Colibrì 等本機推論引擎、Agent 應用與技能生態系。
 - **參考資源**：繁中術語、教材狀態、來源與授權說明。
 
 早期依 Datawhale China／Hello Claw 整理的參考教材仍保留在「舊版教材整理」區。OpenClaw 由主線必修改為進階選修，不再要求新手先安裝一整套 Agent Gateway。
@@ -68,3 +70,11 @@ npm run docs:preview
 - 早期參考教材 Datawhale China／Hello Claw：https://github.com/datawhalechina/hello-claw
 
 授權與來源細節請見網站的「來源與授權」頁面。
+
+## 新增課程
+
+- Agent 應用比較：https://b101113002.github.io/openclaw_tryweb/guide/agent-apps/
+- Agent Skills 與技能庫：https://b101113002.github.io/openclaw_tryweb/guide/skills/
+- Markdown 與 System Prompt：https://b101113002.github.io/openclaw_tryweb/guide/prompts/
+- Colibrì 大型 MoE 推論：https://b101113002.github.io/openclaw_tryweb/guide/colibri/
+- 新技術觀測：https://b101113002.github.io/openclaw_tryweb/reference/tech-watch/

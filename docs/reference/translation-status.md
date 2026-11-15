@@ -1,6 +1,6 @@
 # 教材狀態與來源追蹤
 
-本站已把主要學習路線改為「本機開源 AI 對話室、文件知識庫、開源網路搜尋與 AI Agent」。OpenClaw 不再是唯一主角，而是進階 Agent 選修路線。
+本站主要學習路線為「本機開源 AI 對話室、文件知識庫、開源網路搜尋、AI Agent、Agent Skills 與 Prompt 工程」。OpenClaw 是進階 Agent 選修路線之一。
 
 ## 本機 AI 入門課程
 
@@ -14,6 +14,10 @@
 | 05｜選擇非中國開發模型 | <Badge type="success">已更新選型指南</Badge> | 更新 Gemma 4 與 Granite 4.2，補上硬體估算、模型來源及實測方法。 |
 | 06｜建立 AI Agent 工作流程 | <Badge type="success">已完成初版</Badge> | 介紹 AnythingLLM Agent、MCP 工具與 OpenClaw 進階路線。 |
 | 07｜安全與資料邊界 | <Badge type="success">已完成初版</Badge> | 區分本機／外部資料流與人工確認。 |
+| 08｜AI Agent 應用選擇 | <Badge type="success">已完成初版</Badge> | 比較 AnythingLLM、Agent Zero、OpenHands、Flowise、Dify 與 OpenClaw。 |
+| 09｜Agent Skills 與技能庫 | <Badge type="success">已完成初版</Badge> | 介紹 Agent Skills 開放格式、skills.sh、Vercel CLI 與安全審核。 |
+| 10｜Markdown 與 System Prompt | <Badge type="success">已完成初版</Badge> | 提供 README、AGENTS.md、SKILL.md 與 System Prompt 模板。 |
+| 11｜Colibrì 與大型 MoE 推論 | <Badge type="success">已完成初版</Badge> | 解釋 GPU／RAM／NVMe 分層推論，明確排除中國模型白名單。 |
 
 「已完成初版」表示已有可閱讀的教學步驟與官方來源；尚未代表已在所有作業系統、硬體型號與模型組合上完成實測。模型硬體表中的數字是官方估算，使用者仍需在自己的電腦上測試。SearXNG + MCP 教學已有初步安裝與設定步驟，仍需在不同系統上實際驗證。
 
@@ -50,5 +54,14 @@ Datawhale China／Hello Claw 早期參考內容保留在「OpenClaw 舊版教材
 - [mcp-searxng 原始碼與 MIT License](https://github.com/ihor-sokoliuk/mcp-searxng)
 - [OpenClaw 官方文件](https://docs.openclaw.ai/)
 - [Datawhale China／Hello Claw](https://github.com/datawhalechina/hello-claw)（早期參考教材）
+
+最後查核日期：2026-11-15。
+
+
+## 新技術觀測
+
+新技術觀測頁會定期追蹤 Agent 應用、技能庫、MCP、生態系及本機推論引擎。只有授權、來源、維護狀態與實用性經核對後，才會納入推薦。
+
+[查看新技術觀測](/reference/tech-watch)
 
 最後查核日期：2026-11-15。
