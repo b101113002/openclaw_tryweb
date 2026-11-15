@@ -51,7 +51,7 @@ SearXNG 與 MCP Server 可以在自己的電腦執行，不代表搜尋資料本
 
 Colibrì、Agent Skills、skills.sh、Agent Zero、OpenHands 與視覺化 Agent 工作流已加入教材；未來會依官方 Release、授權與相容性定期檢查。
 
-[查看新技術觀測與更新紀錄](/reference/tech-watch/)
+[查看新技術觀測與更新紀錄](/reference/tech-watch)
 
 ## 下一步
 
