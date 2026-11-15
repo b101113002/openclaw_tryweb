@@ -11,7 +11,8 @@
 | 本機模型 | Google Gemma 4、IBM Granite 4.2 | 文字、圖片理解、工具任務 | 公開權重可下載；依個別模型授權使用 |
 | 開源網路搜尋 | SearXNG（AGPL-3.0）+ mcp-searxng（MIT） | 自架搜尋聚合服務，透過 MCP 接到 AnythingLLM Agent | 不需商業搜尋 API Key；需 Docker／Podman 與 Node.js |
 | 便利備用搜尋 | AnythingLLM 內建 DuckDuckGo | 快速測試網頁搜尋 | 不需 API Key，但屬於第三方非開源服務 |
-| 進階 Agent | OpenClaw（MIT） | 多渠道、排程、工具路由與多 Agent | 可連接本機模型；不必先用雲端模型 |
+| Agent Skills | Agent Skills 格式 + Vercel Skills CLI（MIT） | 可攜式任務流程與技能管理 | 公開技能可直接下載；CLI 遙測可關閉 |
+| 進階 Agent | Agent Zero、OpenHands、OpenClaw | 通用任務、程式開發、多渠道自動化 | 可連接本機模型；依工具設定而定 |
 
 只做本機聊天與文件問答，不需要先安裝 Docker、資料庫、向量資料庫或多個雲端 SaaS。若你要求網路搜尋軟體也採開源路線，再依第 04 課安裝 SearXNG 與 MCP Server。
 
@@ -26,6 +27,10 @@
 | 05 | [選擇非中國開發模型](/guide/models/) | 依授權、模型來源與硬體挑選模型 |
 | 06 | [建立 AI Agent 工作流程](/guide/agent-workflows/) | 使用 MCP 工具、搜尋、擷取與整理資料 |
 | 07 | [安全與資料邊界](/guide/safety/) | 確認檔案權限、網路流向與人工確認機制 |
+| 08 | [AI Agent 應用選擇](/guide/agent-apps/) | 依研究、程式開發、工作流與自動化挑選工具 |
+| 09 | [Agent Skills 與技能庫](/guide/skills/) | 找到、審查、安裝與維護 SKILL.md |
+| 10 | [Markdown 與 System Prompt](/guide/prompts/) | 撰寫 AGENTS.md、System Prompt 與專用 Skill |
+| 11 | [Colibrì 與大型 MoE 推論](/guide/colibri/) | 理解 GPU／RAM／NVMe 分層推論與模型白名單 |
 
 ## 我們的篩選原則
 
@@ -41,6 +46,12 @@
 SearXNG 與 MCP Server 可以在自己的電腦執行，不代表搜尋資料本身也全部開源。SearXNG 會向你啟用的上游搜尋引擎發出查詢，再把結果整理給 Agent；上游引擎及原始網站仍是第三方服務，可能限流、要求 CAPTCHA 或改變政策。
 
 因此本站的目標是「使用開源的本機軟體、不必註冊多個搜尋 API 服務」，而不是宣稱網路搜尋可以永久無限制，或所有網頁資料都屬開源。
+
+## 新技術觀測
+
+Colibrì、Agent Skills、skills.sh、Agent Zero、OpenHands 與視覺化 Agent 工作流已加入教材；未來會依官方 Release、授權與相容性定期檢查。
+
+[查看新技術觀測與更新紀錄](/reference/tech-watch/)
 
 ## 下一步
 
