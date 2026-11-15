@@ -1,5 +1,14 @@
 # 更新紀錄
 
+## 2026-11-15｜新增 Agent 應用、技能庫、Markdown 與 Prompt 教學
+
+- 新增 AI Agent 應用選擇指南，比較 AnythingLLM、Agent Zero、OpenHands、Flowise、Dify 與 OpenClaw。
+- 新增 Agent Skills 與技能庫教學，介紹開放的 SKILL.md 格式、skills.sh、Vercel Skills CLI、MCP Registry 與安全審查。
+- 新增 Markdown、AGENTS.md、SKILL.md 與 System Prompt 撰寫教學，提供可改寫的範本及驗收測試。
+- 新增 Colibrì 技術專題，說明大型 MoE 權重在 GPU、RAM 與 NVMe 之間分層執行的原理及限制。
+- 明確區分 Colibrì 推論引擎與其支援模型；GLM、Kimi、DeepSeek、Qwen、MiMo 等中國開發模型不納入本站白名單。
+- 新增新技術觀測頁，記錄官方來源、授權、相容性及後續更新原則。
+
 ## 2026-11-15｜將開源網路搜尋接入 AnythingLLM Agent
 
 - 調整搜尋教學定位：以 SearXNG（AGPL-3.0）+ mcp-searxng（MIT）作為開源軟體路線，DuckDuckGo 只保留為免設定備用。
